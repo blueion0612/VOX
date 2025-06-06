@@ -1,0 +1,865 @@
+[BiLSTM]
+PS C:\Capstone\arm-pose-estimation-main> 
+& C:/Users/bluei/AppData/Local/Programs/Python/Python312/python.exe c:/Capstone/arm-pose-estimation-main/src/wear_mocap_ape/classification/fine_tune_online.py --train-csv online_vxo.csv --test-csv vxo_gesture.csv --pretrained offline_gesture_bilstm.pth --model bilstm --output online_gesture_bilstm.pth  --lr 1e-3
+==================================================
+### 1단계: bilstm 모델 5-Fold 교차 검증 시작 ###
+==================================================
+
+--- Fold 1/5 ---
+  Fold 1 | Epoch 1/25 | Val Loss: 0.3053, Val F1: 0.9165
+  Fold 1 | Epoch 2/25 | Val Loss: 0.2964, Val F1: 0.9165
+  Fold 1 | Epoch 3/25 | Val Loss: 0.2875, Val F1: 0.9165
+  Fold 1 | Epoch 4/25 | Val Loss: 0.2785, Val F1: 0.9165
+  Fold 1 | Epoch 5/25 | Val Loss: 0.2703, Val F1: 0.9165
+  Fold 1 | Epoch 6/25 | Val Loss: 0.2623, Val F1: 0.9165
+  Fold 1 | Epoch 7/25 | Val Loss: 0.2547, Val F1: 0.9165
+  Fold 1 | Epoch 8/25 | Val Loss: 0.2480, Val F1: 0.9165
+  Fold 1 | Epoch 9/25 | Val Loss: 0.2414, Val F1: 0.9165
+  Fold 1 | Epoch 10/25 | Val Loss: 0.2347, Val F1: 0.9165
+  Fold 1 | Epoch 11/25 | Val Loss: 0.2287, Val F1: 0.9165
+  Fold 1 | Epoch 12/25 | Val Loss: 0.2226, Val F1: 0.9165
+  Fold 1 | Epoch 13/25 | Val Loss: 0.2167, Val F1: 0.9165
+  Fold 1 | Epoch 14/25 | Val Loss: 0.2116, Val F1: 0.9165
+  Fold 1 | Epoch 15/25 | Val Loss: 0.2071, Val F1: 0.9165
+  Fold 1 | Epoch 16/25 | Val Loss: 0.2019, Val F1: 0.9165
+  Fold 1 | Epoch 17/25 | Val Loss: 0.1967, Val F1: 0.9165
+  Fold 1 | Epoch 18/25 | Val Loss: 0.1916, Val F1: 0.9165
+  Fold 1 | Epoch 19/25 | Val Loss: 0.1869, Val F1: 0.9165
+  Fold 1 | Epoch 20/25 | Val Loss: 0.1823, Val F1: 0.9165
+  Fold 1 | Epoch 21/25 | Val Loss: 0.1778, Val F1: 0.9165
+  Fold 1 | Epoch 22/25 | Val Loss: 0.1735, Val F1: 0.9165
+  Fold 1 | Epoch 23/25 | Val Loss: 0.1693, Val F1: 0.9441
+  Fold 1 | Epoch 24/25 | Val Loss: 0.1655, Val F1: 0.9441
+  Fold 1 | Epoch 25/25 | Val Loss: 0.1625, Val F1: 0.9441
+
+--- Fold 2/5 ---
+  Fold 2 | Epoch 1/25 | Val Loss: 0.4106, Val F1: 0.8230
+  Fold 2 | Epoch 2/25 | Val Loss: 0.3999, Val F1: 0.8230
+  Fold 2 | Epoch 3/25 | Val Loss: 0.3883, Val F1: 0.8230
+  Fold 2 | Epoch 4/25 | Val Loss: 0.3772, Val F1: 0.8230
+  Fold 2 | Epoch 5/25 | Val Loss: 0.3661, Val F1: 0.8230
+  Fold 2 | Epoch 6/25 | Val Loss: 0.3560, Val F1: 0.8230
+  Fold 2 | Epoch 7/25 | Val Loss: 0.3461, Val F1: 0.8550
+  Fold 2 | Epoch 8/25 | Val Loss: 0.3371, Val F1: 0.8550
+  Fold 2 | Epoch 9/25 | Val Loss: 0.3279, Val F1: 0.8550
+  Fold 2 | Epoch 10/25 | Val Loss: 0.3198, Val F1: 0.8550
+  Fold 2 | Epoch 11/25 | Val Loss: 0.3128, Val F1: 0.8550
+  Fold 2 | Epoch 12/25 | Val Loss: 0.3065, Val F1: 0.8550
+  Fold 2 | Epoch 13/25 | Val Loss: 0.3005, Val F1: 0.8550
+  Fold 2 | Epoch 14/25 | Val Loss: 0.2942, Val F1: 0.8550
+  Fold 2 | Epoch 15/25 | Val Loss: 0.2879, Val F1: 0.8550
+  Fold 2 | Epoch 16/25 | Val Loss: 0.2820, Val F1: 0.8550
+  Fold 2 | Epoch 17/25 | Val Loss: 0.2757, Val F1: 0.8550
+  Fold 2 | Epoch 18/25 | Val Loss: 0.2695, Val F1: 0.8550
+  Fold 2 | Epoch 19/25 | Val Loss: 0.2630, Val F1: 0.8550
+  Fold 2 | Epoch 20/25 | Val Loss: 0.2566, Val F1: 0.8550
+  Fold 2 | Epoch 21/25 | Val Loss: 0.2506, Val F1: 0.8550
+  Fold 2 | Epoch 22/25 | Val Loss: 0.2449, Val F1: 0.8550
+  Fold 2 | Epoch 23/25 | Val Loss: 0.2384, Val F1: 0.8550
+  Fold 2 | Epoch 24/25 | Val Loss: 0.2325, Val F1: 0.8550
+  Fold 2 | Epoch 25/25 | Val Loss: 0.2264, Val F1: 0.8550
+
+--- Fold 3/5 ---
+  Fold 3 | Epoch 1/25 | Val Loss: 0.3385, Val F1: 0.9134
+  Fold 3 | Epoch 2/25 | Val Loss: 0.3264, Val F1: 0.9134
+  Fold 3 | Epoch 3/25 | Val Loss: 0.3149, Val F1: 0.9134
+  Fold 3 | Epoch 4/25 | Val Loss: 0.3041, Val F1: 0.9430
+  Fold 3 | Epoch 5/25 | Val Loss: 0.2947, Val F1: 0.9430
+  Fold 3 | Epoch 6/25 | Val Loss: 0.2859, Val F1: 0.9430
+  Fold 3 | Epoch 7/25 | Val Loss: 0.2776, Val F1: 0.9430
+  Fold 3 | Epoch 8/25 | Val Loss: 0.2693, Val F1: 0.9430
+  Fold 3 | Epoch 9/25 | Val Loss: 0.2613, Val F1: 0.9430
+  Fold 3 | Epoch 10/25 | Val Loss: 0.2535, Val F1: 0.9430
+  Fold 3 | Epoch 11/25 | Val Loss: 0.2458, Val F1: 0.9430
+  Fold 3 | Epoch 12/25 | Val Loss: 0.2388, Val F1: 0.9430
+  Fold 3 | Epoch 13/25 | Val Loss: 0.2324, Val F1: 0.9430
+  Fold 3 | Epoch 14/25 | Val Loss: 0.2253, Val F1: 0.9430
+  Fold 3 | Epoch 15/25 | Val Loss: 0.2188, Val F1: 0.9430
+  Fold 3 | Epoch 16/25 | Val Loss: 0.2134, Val F1: 0.9430
+  Fold 3 | Epoch 17/25 | Val Loss: 0.2079, Val F1: 0.9430
+  Fold 3 | Epoch 18/25 | Val Loss: 0.2023, Val F1: 0.9430
+  Fold 3 | Epoch 19/25 | Val Loss: 0.1965, Val F1: 0.9722
+  Fold 3 | Epoch 20/25 | Val Loss: 0.1911, Val F1: 0.9722
+  Fold 3 | Epoch 21/25 | Val Loss: 0.1858, Val F1: 0.9722
+  Fold 3 | Epoch 22/25 | Val Loss: 0.1812, Val F1: 0.9722
+  Fold 3 | Epoch 23/25 | Val Loss: 0.1766, Val F1: 0.9722
+  Fold 3 | Epoch 24/25 | Val Loss: 0.1721, Val F1: 0.9722
+  Fold 3 | Epoch 25/25 | Val Loss: 0.1678, Val F1: 0.9722
+
+--- Fold 4/5 ---
+  Fold 4 | Epoch 1/25 | Val Loss: 0.3425, Val F1: 0.8309
+  Fold 4 | Epoch 2/25 | Val Loss: 0.3411, Val F1: 0.8309
+  Fold 4 | Epoch 3/25 | Val Loss: 0.3401, Val F1: 0.8309
+  Fold 4 | Epoch 4/25 | Val Loss: 0.3373, Val F1: 0.8309
+  Fold 4 | Epoch 5/25 | Val Loss: 0.3353, Val F1: 0.8309
+  Fold 4 | Epoch 6/25 | Val Loss: 0.3320, Val F1: 0.8309
+  Fold 4 | Epoch 7/25 | Val Loss: 0.3280, Val F1: 0.8309
+  Fold 4 | Epoch 8/25 | Val Loss: 0.3240, Val F1: 0.8309
+  Fold 4 | Epoch 9/25 | Val Loss: 0.3194, Val F1: 0.8309
+  Fold 4 | Epoch 10/25 | Val Loss: 0.3145, Val F1: 0.8309
+  Fold 4 | Epoch 11/25 | Val Loss: 0.3113, Val F1: 0.8309
+  Fold 4 | Epoch 12/25 | Val Loss: 0.3065, Val F1: 0.8309
+  Fold 4 | Epoch 13/25 | Val Loss: 0.3012, Val F1: 0.8609
+  Fold 4 | Epoch 14/25 | Val Loss: 0.2964, Val F1: 0.8609
+  Fold 4 | Epoch 15/25 | Val Loss: 0.2921, Val F1: 0.8881
+  Fold 4 | Epoch 16/25 | Val Loss: 0.2883, Val F1: 0.8881
+  Fold 4 | Epoch 17/25 | Val Loss: 0.2832, Val F1: 0.8881
+  Fold 4 | Epoch 18/25 | Val Loss: 0.2786, Val F1: 0.8881
+  Fold 4 | Epoch 19/25 | Val Loss: 0.2763, Val F1: 0.8881
+  Fold 4 | Epoch 20/25 | Val Loss: 0.2726, Val F1: 0.8881
+  Fold 4 | Epoch 21/25 | Val Loss: 0.2686, Val F1: 0.8881
+  Fold 4 | Epoch 22/25 | Val Loss: 0.2650, Val F1: 0.8881
+  Fold 4 | Epoch 23/25 | Val Loss: 0.2600, Val F1: 0.8881
+  Fold 4 | Epoch 24/25 | Val Loss: 0.2533, Val F1: 0.8881
+  Fold 4 | Epoch 25/25 | Val Loss: 0.2489, Val F1: 0.8881
+
+--- Fold 5/5 ---
+  Fold 5 | Epoch 1/25 | Val Loss: 0.3564, Val F1: 0.9084
+  Fold 5 | Epoch 2/25 | Val Loss: 0.3471, Val F1: 0.9400
+  Fold 5 | Epoch 3/25 | Val Loss: 0.3373, Val F1: 0.9400
+  Fold 5 | Epoch 4/25 | Val Loss: 0.3289, Val F1: 0.9400
+  Fold 5 | Epoch 5/25 | Val Loss: 0.3207, Val F1: 0.9400
+  Fold 5 | Epoch 6/25 | Val Loss: 0.3129, Val F1: 0.9400
+  Fold 5 | Epoch 7/25 | Val Loss: 0.3055, Val F1: 0.9400
+  Fold 5 | Epoch 8/25 | Val Loss: 0.2981, Val F1: 0.9400
+  Fold 5 | Epoch 9/25 | Val Loss: 0.2908, Val F1: 0.9400
+  Fold 5 | Epoch 10/25 | Val Loss: 0.2841, Val F1: 0.9400
+  Fold 5 | Epoch 11/25 | Val Loss: 0.2777, Val F1: 0.9400
+  Fold 5 | Epoch 12/25 | Val Loss: 0.2714, Val F1: 0.9400
+  Fold 5 | Epoch 13/25 | Val Loss: 0.2653, Val F1: 0.9708
+  Fold 5 | Epoch 14/25 | Val Loss: 0.2597, Val F1: 0.9708
+  Fold 5 | Epoch 15/25 | Val Loss: 0.2541, Val F1: 0.9708
+  Fold 5 | Epoch 16/25 | Val Loss: 0.2484, Val F1: 0.9708
+  Fold 5 | Epoch 17/25 | Val Loss: 0.2431, Val F1: 0.9708
+  Fold 5 | Epoch 18/25 | Val Loss: 0.2377, Val F1: 0.9708
+  Fold 5 | Epoch 19/25 | Val Loss: 0.2329, Val F1: 0.9708
+  Fold 5 | Epoch 20/25 | Val Loss: 0.2281, Val F1: 0.9708
+  Fold 5 | Epoch 21/25 | Val Loss: 0.2234, Val F1: 0.9708
+  Fold 5 | Epoch 22/25 | Val Loss: 0.2188, Val F1: 0.9708
+  Fold 5 | Epoch 23/25 | Val Loss: 0.2145, Val F1: 0.9708
+  Fold 5 | Epoch 24/25 | Val Loss: 0.2100, Val F1: 0.9708
+  Fold 5 | Epoch 25/25 | Val Loss: 0.2056, Val F1: 0.9708
+
+--- 5-Fold CV Summary ---
+Mean Validation F1: 0.9260 ± 0.0468
+
+Unfreezing for bilstm: model.fc
+Step 15/150 - Test Loss: 0.1652, Accuracy: 0.9500, F1: 0.9504
+Step 30/150 - Test Loss: 0.1562, Accuracy: 0.9500, F1: 0.9504
+Step 45/150 - Test Loss: 0.1482, Accuracy: 0.9667, F1: 0.9670
+Step 60/150 - Test Loss: 0.1371, Accuracy: 0.9667, F1: 0.9670
+Step 75/150 - Test Loss: 0.1278, Accuracy: 0.9667, F1: 0.9670
+Step 90/150 - Test Loss: 0.1187, Accuracy: 0.9667, F1: 0.9670
+Step 105/150 - Test Loss: 0.1081, Accuracy: 0.9667, F1: 0.9670
+Step 120/150 - Test Loss: 0.1007, Accuracy: 0.9667, F1: 0.9670
+Step 135/150 - Test Loss: 0.0950, Accuracy: 0.9667, F1: 0.9670
+Step 150/150 - Test Loss: 0.0901, Accuracy: 0.9667, F1: 0.9670
+
+Final evaluation on the model from the last iteration...
+
+=== Final Test Results for bilstm ===
+Test Loss       : 0.0901
+Test Accuracy   : 0.9667
+Macro F1 score  : 0.9670
+Confusion Matrix:
+[[20  0  0]
+ [ 1 19  0]
+ [ 1  0 19]]
+
+Saved final model to online_gesture_bilstm.pth
+
+[GRU]
+PS C:\Capstone\arm-pose-estimation-main> & C:/Users/bluei/AppData/Local/Programs/Python/Python312/python.exe c:/Capstone/arm-pose-estimation-main/src/wear_mocap_ape/classification/fine_tune_online.py --train-csv online_vxo.csv --test-csv vxo_gesture.csv --pretrained offline_gesture_gru.pth --model gru --output online_gesture_gru.pth  --lr 3e-4               
+==================================================
+### 1단계: gru 모델 5-Fold 교차 검증 시작 ###
+==================================================
+
+--- Fold 1/5 ---
+  Fold 1 | Epoch 1/25 | Val Loss: 0.9646, Val F1: 0.5777
+  Fold 1 | Epoch 2/25 | Val Loss: 0.8424, Val F1: 0.6478
+  Fold 1 | Epoch 3/25 | Val Loss: 0.7588, Val F1: 0.6914
+  Fold 1 | Epoch 4/25 | Val Loss: 0.7002, Val F1: 0.6381
+  Fold 1 | Epoch 5/25 | Val Loss: 0.6594, Val F1: 0.6759
+  Fold 1 | Epoch 6/25 | Val Loss: 0.6206, Val F1: 0.6869
+  Fold 1 | Epoch 7/25 | Val Loss: 0.5776, Val F1: 0.7758
+  Fold 1 | Epoch 8/25 | Val Loss: 0.5419, Val F1: 0.8364
+  Fold 1 | Epoch 9/25 | Val Loss: 0.5185, Val F1: 0.8364
+  Fold 1 | Epoch 10/25 | Val Loss: 0.4936, Val F1: 0.8364
+  Fold 1 | Epoch 11/25 | Val Loss: 0.4818, Val F1: 0.8364
+  Fold 1 | Epoch 12/25 | Val Loss: 0.4684, Val F1: 0.8364
+  Fold 1 | Epoch 13/25 | Val Loss: 0.4446, Val F1: 0.8364
+  Fold 1 | Epoch 14/25 | Val Loss: 0.4215, Val F1: 0.8364
+  Fold 1 | Epoch 15/25 | Val Loss: 0.3885, Val F1: 0.8646
+  Fold 1 | Epoch 16/25 | Val Loss: 0.3701, Val F1: 0.8646
+  Fold 1 | Epoch 17/25 | Val Loss: 0.3617, Val F1: 0.8646
+  Fold 1 | Epoch 18/25 | Val Loss: 0.3583, Val F1: 0.8646
+  Fold 1 | Epoch 19/25 | Val Loss: 0.3210, Val F1: 0.8646
+  Fold 1 | Epoch 20/25 | Val Loss: 0.3083, Val F1: 0.8918
+  Fold 1 | Epoch 21/25 | Val Loss: 0.2831, Val F1: 0.8918
+  Fold 1 | Epoch 22/25 | Val Loss: 0.2538, Val F1: 0.9164
+  Fold 1 | Epoch 23/25 | Val Loss: 0.2376, Val F1: 0.9164
+  Fold 1 | Epoch 24/25 | Val Loss: 0.2376, Val F1: 0.9164
+  Fold 1 | Epoch 25/25 | Val Loss: 0.1965, Val F1: 0.9444
+
+--- Fold 2/5 ---
+  Fold 2 | Epoch 1/25 | Val Loss: 0.8625, Val F1: 0.5581
+  Fold 2 | Epoch 2/25 | Val Loss: 0.6916, Val F1: 0.6680
+  Fold 2 | Epoch 3/25 | Val Loss: 0.5959, Val F1: 0.7074
+  Fold 2 | Epoch 4/25 | Val Loss: 0.5522, Val F1: 0.7397
+  Fold 2 | Epoch 5/25 | Val Loss: 0.5351, Val F1: 0.8039
+  Fold 2 | Epoch 6/25 | Val Loss: 0.5157, Val F1: 0.8629
+  Fold 2 | Epoch 7/25 | Val Loss: 0.4885, Val F1: 0.8364
+  Fold 2 | Epoch 8/25 | Val Loss: 0.4599, Val F1: 0.8629
+  Fold 2 | Epoch 9/25 | Val Loss: 0.4245, Val F1: 0.8900
+  Fold 2 | Epoch 10/25 | Val Loss: 0.3913, Val F1: 0.8907
+  Fold 2 | Epoch 11/25 | Val Loss: 0.3658, Val F1: 0.8633
+  Fold 2 | Epoch 12/25 | Val Loss: 0.3454, Val F1: 0.9164
+  Fold 2 | Epoch 13/25 | Val Loss: 0.3322, Val F1: 0.9164
+  Fold 2 | Epoch 14/25 | Val Loss: 0.3298, Val F1: 0.8879
+  Fold 2 | Epoch 15/25 | Val Loss: 0.3049, Val F1: 0.8879
+  Fold 2 | Epoch 16/25 | Val Loss: 0.2879, Val F1: 0.9164
+  Fold 2 | Epoch 17/25 | Val Loss: 0.2850, Val F1: 0.9164
+  Fold 2 | Epoch 18/25 | Val Loss: 0.2672, Val F1: 0.9164
+  Fold 2 | Epoch 19/25 | Val Loss: 0.2576, Val F1: 0.9164
+  Fold 2 | Epoch 20/25 | Val Loss: 0.2347, Val F1: 0.9164
+  Fold 2 | Epoch 21/25 | Val Loss: 0.2462, Val F1: 0.9164
+  Fold 2 | Epoch 22/25 | Val Loss: 0.2538, Val F1: 0.9182
+  Fold 2 | Epoch 23/25 | Val Loss: 0.2178, Val F1: 0.9164
+  Fold 2 | Epoch 24/25 | Val Loss: 0.1902, Val F1: 0.9441
+  Fold 2 | Epoch 25/25 | Val Loss: 0.1923, Val F1: 0.9182
+
+--- Fold 3/5 ---
+  Fold 3 | Epoch 1/25 | Val Loss: 0.7730, Val F1: 0.6503
+  Fold 3 | Epoch 2/25 | Val Loss: 0.6408, Val F1: 0.7151
+  Fold 3 | Epoch 3/25 | Val Loss: 0.5703, Val F1: 0.7796
+  Fold 3 | Epoch 4/25 | Val Loss: 0.5403, Val F1: 0.7635
+  Fold 3 | Epoch 5/25 | Val Loss: 0.5341, Val F1: 0.7978
+  Fold 3 | Epoch 6/25 | Val Loss: 0.5205, Val F1: 0.8065
+  Fold 3 | Epoch 7/25 | Val Loss: 0.4881, Val F1: 0.8312
+  Fold 3 | Epoch 8/25 | Val Loss: 0.4527, Val F1: 0.7978
+  Fold 3 | Epoch 9/25 | Val Loss: 0.4271, Val F1: 0.8246
+  Fold 3 | Epoch 10/25 | Val Loss: 0.4099, Val F1: 0.8246
+  Fold 3 | Epoch 11/25 | Val Loss: 0.4003, Val F1: 0.8246
+  Fold 3 | Epoch 12/25 | Val Loss: 0.3833, Val F1: 0.8246
+  Fold 3 | Epoch 13/25 | Val Loss: 0.3740, Val F1: 0.8558
+  Fold 3 | Epoch 14/25 | Val Loss: 0.3654, Val F1: 0.8558
+  Fold 3 | Epoch 15/25 | Val Loss: 0.3553, Val F1: 0.8558
+  Fold 3 | Epoch 16/25 | Val Loss: 0.3446, Val F1: 0.8558
+  Fold 3 | Epoch 17/25 | Val Loss: 0.3119, Val F1: 0.8860
+  Fold 3 | Epoch 18/25 | Val Loss: 0.2965, Val F1: 0.8860
+  Fold 3 | Epoch 19/25 | Val Loss: 0.2819, Val F1: 0.8860
+  Fold 3 | Epoch 20/25 | Val Loss: 0.2875, Val F1: 0.8830
+  Fold 3 | Epoch 21/25 | Val Loss: 0.2601, Val F1: 0.9134
+  Fold 3 | Epoch 22/25 | Val Loss: 0.2426, Val F1: 0.9134
+  Fold 3 | Epoch 23/25 | Val Loss: 0.2387, Val F1: 0.9134
+  Fold 3 | Epoch 24/25 | Val Loss: 0.2096, Val F1: 0.9430
+  Fold 3 | Epoch 25/25 | Val Loss: 0.1908, Val F1: 0.9430
+
+--- Fold 4/5 ---
+  Fold 4 | Epoch 1/25 | Val Loss: 1.2186, Val F1: 0.5504
+  Fold 4 | Epoch 2/25 | Val Loss: 0.9640, Val F1: 0.5504
+  Fold 4 | Epoch 3/25 | Val Loss: 0.7833, Val F1: 0.6222
+  Fold 4 | Epoch 4/25 | Val Loss: 0.6878, Val F1: 0.7411
+  Fold 4 | Epoch 5/25 | Val Loss: 0.6316, Val F1: 0.7467
+  Fold 4 | Epoch 6/25 | Val Loss: 0.5917, Val F1: 0.8294
+  Fold 4 | Epoch 7/25 | Val Loss: 0.5637, Val F1: 0.8564
+  Fold 4 | Epoch 8/25 | Val Loss: 0.5309, Val F1: 0.8564
+  Fold 4 | Epoch 9/25 | Val Loss: 0.4982, Val F1: 0.8564
+  Fold 4 | Epoch 10/25 | Val Loss: 0.4684, Val F1: 0.8564
+  Fold 4 | Epoch 11/25 | Val Loss: 0.4384, Val F1: 0.8830
+  Fold 4 | Epoch 12/25 | Val Loss: 0.4236, Val F1: 0.8821
+  Fold 4 | Epoch 13/25 | Val Loss: 0.4133, Val F1: 0.8821
+  Fold 4 | Epoch 14/25 | Val Loss: 0.4067, Val F1: 0.8563
+  Fold 4 | Epoch 15/25 | Val Loss: 0.3958, Val F1: 0.8563
+  Fold 4 | Epoch 16/25 | Val Loss: 0.3719, Val F1: 0.8821
+  Fold 4 | Epoch 17/25 | Val Loss: 0.3390, Val F1: 0.8821
+  Fold 4 | Epoch 18/25 | Val Loss: 0.3321, Val F1: 0.8821
+  Fold 4 | Epoch 19/25 | Val Loss: 0.3287, Val F1: 0.8821
+  Fold 4 | Epoch 20/25 | Val Loss: 0.3055, Val F1: 0.8821
+  Fold 4 | Epoch 21/25 | Val Loss: 0.2871, Val F1: 0.9134
+  Fold 4 | Epoch 22/25 | Val Loss: 0.2770, Val F1: 0.9134
+  Fold 4 | Epoch 23/25 | Val Loss: 0.2632, Val F1: 0.9134
+  Fold 4 | Epoch 24/25 | Val Loss: 0.2581, Val F1: 0.9134
+  Fold 4 | Epoch 25/25 | Val Loss: 0.2506, Val F1: 0.9134
+
+--- Fold 5/5 ---
+  Fold 5 | Epoch 1/25 | Val Loss: 1.1055, Val F1: 0.6061
+  Fold 5 | Epoch 2/25 | Val Loss: 0.9336, Val F1: 0.6307
+  Fold 5 | Epoch 3/25 | Val Loss: 0.7895, Val F1: 0.6581
+  Fold 5 | Epoch 4/25 | Val Loss: 0.6888, Val F1: 0.6663
+  Fold 5 | Epoch 5/25 | Val Loss: 0.6279, Val F1: 0.7377
+  Fold 5 | Epoch 6/25 | Val Loss: 0.5899, Val F1: 0.7680
+  Fold 5 | Epoch 7/25 | Val Loss: 0.5611, Val F1: 0.7983
+  Fold 5 | Epoch 8/25 | Val Loss: 0.5354, Val F1: 0.8281
+  Fold 5 | Epoch 9/25 | Val Loss: 0.5120, Val F1: 0.8281
+  Fold 5 | Epoch 10/25 | Val Loss: 0.4936, Val F1: 0.8281
+  Fold 5 | Epoch 11/25 | Val Loss: 0.4739, Val F1: 0.8281
+  Fold 5 | Epoch 12/25 | Val Loss: 0.4552, Val F1: 0.8281
+  Fold 5 | Epoch 13/25 | Val Loss: 0.4359, Val F1: 0.8281
+  Fold 5 | Epoch 14/25 | Val Loss: 0.4185, Val F1: 0.8281
+  Fold 5 | Epoch 15/25 | Val Loss: 0.4030, Val F1: 0.8281
+  Fold 5 | Epoch 16/25 | Val Loss: 0.3881, Val F1: 0.8543
+  Fold 5 | Epoch 17/25 | Val Loss: 0.3715, Val F1: 0.8281
+  Fold 5 | Epoch 18/25 | Val Loss: 0.3550, Val F1: 0.8281
+  Fold 5 | Epoch 19/25 | Val Loss: 0.3362, Val F1: 0.8543
+  Fold 5 | Epoch 20/25 | Val Loss: 0.3160, Val F1: 0.8846
+  Fold 5 | Epoch 21/25 | Val Loss: 0.2915, Val F1: 0.8846
+  Fold 5 | Epoch 22/25 | Val Loss: 0.2701, Val F1: 0.8846
+  Fold 5 | Epoch 23/25 | Val Loss: 0.2491, Val F1: 0.8846
+  Fold 5 | Epoch 24/25 | Val Loss: 0.2298, Val F1: 0.9122
+  Fold 5 | Epoch 25/25 | Val Loss: 0.2088, Val F1: 0.9419
+
+--- 5-Fold CV Summary ---
+Mean Validation F1: 0.9322 ± 0.0135
+
+Unfreezing for GRU: model.gru2, model.gru3, and model.fc
+Step 20/200 - Test Loss: 0.5870, Accuracy: 0.8000, F1: 0.7954
+Step 40/200 - Test Loss: 0.5768, Accuracy: 0.7667, F1: 0.7594
+Step 60/200 - Test Loss: 0.5585, Accuracy: 0.7833, F1: 0.7761
+Step 80/200 - Test Loss: 0.5589, Accuracy: 0.7833, F1: 0.7761
+Step 100/200 - Test Loss: 0.4868, Accuracy: 0.8167, F1: 0.8127
+Step 120/200 - Test Loss: 0.3860, Accuracy: 0.8667, F1: 0.8648
+Step 140/200 - Test Loss: 0.2748, Accuracy: 0.8833, F1: 0.8832
+Step 160/200 - Test Loss: 0.2331, Accuracy: 0.9167, F1: 0.9160
+Step 180/200 - Test Loss: 0.2722, Accuracy: 0.9167, F1: 0.9160
+Step 200/200 - Test Loss: 0.3033, Accuracy: 0.9000, F1: 0.8989
+
+Final evaluation on the model from the last iteration...
+
+=== Final Test Results for gru ===
+Test Loss       : 0.3033
+Test Accuracy   : 0.9000
+Macro F1 score  : 0.8989
+Confusion Matrix:
+[[20  0  0]
+ [ 2 17  1]
+ [ 1  2 17]]
+
+Saved final model to online_gesture_gru.pth
+
+[simple CNN]
+PS C:\Capstone\arm-pose-estimation-main> & C:/Users/bluei/AppData/Local/Programs/Python/Python312/python.exe c:/Capstone/arm-pose-estimation-main/src/wear_mocap_ape/classification/fine_tune_online.py --train-csv online_vxo.csv --test-csv vxo_gesture.csv --pretrained offline_gesture_simplecnn.pth --model simplecnn --output online_gesture_simplecnn.pth  --lr 1e-2
+>>
+==================================================
+### 1단계: simplecnn 모델 5-Fold 교차 검증 시작 ###
+==================================================
+
+--- Fold 1/5 ---
+C:\Users\bluei\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\conv.py:306: UserWarning: Plan failed with a cudnnException: CUDNN_BACKEND_EXECUTION_PLAN_DESCRIPTOR: cudnnFinalize Descriptor Failed cudnn_status: CUDNN_STATUS_NOT_SUPPORTED (Triggered internally at ..\aten\src\ATen\native\cudnn\Conv_v8.cpp:919.)
+  return F.conv1d(input, weight, bias, self.stride,
+  Fold 1 | Epoch 1/25 | Val Loss: 0.3564, Val F1: 0.9154
+  Fold 1 | Epoch 2/25 | Val Loss: 0.1133, Val F1: 0.9444
+  Fold 1 | Epoch 3/25 | Val Loss: 0.0571, Val F1: 0.9722
+  Fold 1 | Epoch 4/25 | Val Loss: 0.0327, Val F1: 1.0000
+  Fold 1 | Epoch 5/25 | Val Loss: 0.0181, Val F1: 1.0000
+  Fold 1 | Epoch 6/25 | Val Loss: 0.0124, Val F1: 1.0000
+  Fold 1 | Epoch 7/25 | Val Loss: 0.0097, Val F1: 1.0000
+  Fold 1 | Epoch 8/25 | Val Loss: 0.0080, Val F1: 1.0000
+  Fold 1 | Epoch 9/25 | Val Loss: 0.0069, Val F1: 1.0000
+  Fold 1 | Epoch 10/25 | Val Loss: 0.0061, Val F1: 1.0000
+  Fold 1 | Epoch 11/25 | Val Loss: 0.0058, Val F1: 1.0000
+  Fold 1 | Epoch 12/25 | Val Loss: 0.0059, Val F1: 1.0000
+  Fold 1 | Epoch 13/25 | Val Loss: 0.0058, Val F1: 1.0000
+  Fold 1 | Epoch 14/25 | Val Loss: 0.0052, Val F1: 1.0000
+  Fold 1 | Epoch 15/25 | Val Loss: 0.0045, Val F1: 1.0000
+  Fold 1 | Epoch 16/25 | Val Loss: 0.0042, Val F1: 1.0000
+  Fold 1 | Epoch 17/25 | Val Loss: 0.0041, Val F1: 1.0000
+  Fold 1 | Epoch 18/25 | Val Loss: 0.0046, Val F1: 1.0000
+  Fold 1 | Epoch 19/25 | Val Loss: 0.0051, Val F1: 1.0000
+  Fold 1 | Epoch 20/25 | Val Loss: 0.0054, Val F1: 1.0000
+  Fold 1 | Epoch 21/25 | Val Loss: 0.0053, Val F1: 1.0000
+  Fold 1 | Epoch 22/25 | Val Loss: 0.0051, Val F1: 1.0000
+  Fold 1 | Epoch 23/25 | Val Loss: 0.0047, Val F1: 1.0000
+  Fold 1 | Epoch 24/25 | Val Loss: 0.0042, Val F1: 1.0000
+  Fold 1 | Epoch 25/25 | Val Loss: 0.0040, Val F1: 1.0000
+
+--- Fold 2/5 ---
+  Fold 2 | Epoch 1/25 | Val Loss: 0.3817, Val F1: 0.8907
+  Fold 2 | Epoch 2/25 | Val Loss: 0.2580, Val F1: 0.9441
+  Fold 2 | Epoch 3/25 | Val Loss: 0.1774, Val F1: 0.9441
+  Fold 2 | Epoch 4/25 | Val Loss: 0.0831, Val F1: 0.9722
+  Fold 2 | Epoch 5/25 | Val Loss: 0.0322, Val F1: 1.0000
+  Fold 2 | Epoch 6/25 | Val Loss: 0.0101, Val F1: 1.0000
+  Fold 2 | Epoch 7/25 | Val Loss: 0.0062, Val F1: 1.0000
+  Fold 2 | Epoch 8/25 | Val Loss: 0.0043, Val F1: 1.0000
+  Fold 2 | Epoch 9/25 | Val Loss: 0.0029, Val F1: 1.0000
+  Fold 2 | Epoch 10/25 | Val Loss: 0.0022, Val F1: 1.0000
+  Fold 2 | Epoch 11/25 | Val Loss: 0.0021, Val F1: 1.0000
+  Fold 2 | Epoch 12/25 | Val Loss: 0.0021, Val F1: 1.0000
+  Fold 2 | Epoch 13/25 | Val Loss: 0.0022, Val F1: 1.0000
+  Fold 2 | Epoch 14/25 | Val Loss: 0.0020, Val F1: 1.0000
+  Fold 2 | Epoch 15/25 | Val Loss: 0.0016, Val F1: 1.0000
+  Fold 2 | Epoch 16/25 | Val Loss: 0.0010, Val F1: 1.0000
+  Fold 2 | Epoch 17/25 | Val Loss: 0.0007, Val F1: 1.0000
+  Fold 2 | Epoch 18/25 | Val Loss: 0.0006, Val F1: 1.0000
+  Fold 2 | Epoch 19/25 | Val Loss: 0.0007, Val F1: 1.0000
+  Fold 2 | Epoch 20/25 | Val Loss: 0.0009, Val F1: 1.0000
+  Fold 2 | Epoch 21/25 | Val Loss: 0.0010, Val F1: 1.0000
+  Fold 2 | Epoch 22/25 | Val Loss: 0.0007, Val F1: 1.0000
+  Fold 2 | Epoch 23/25 | Val Loss: 0.0007, Val F1: 1.0000
+  Fold 2 | Epoch 24/25 | Val Loss: 0.0007, Val F1: 1.0000
+  Fold 2 | Epoch 25/25 | Val Loss: 0.0005, Val F1: 1.0000
+
+--- Fold 3/5 ---
+  Fold 3 | Epoch 1/25 | Val Loss: 0.8981, Val F1: 0.8903
+  Fold 3 | Epoch 2/25 | Val Loss: 0.8448, Val F1: 0.8903
+  Fold 3 | Epoch 3/25 | Val Loss: 0.8040, Val F1: 0.8903
+  Fold 3 | Epoch 4/25 | Val Loss: 0.7276, Val F1: 0.8903
+  Fold 3 | Epoch 5/25 | Val Loss: 0.6849, Val F1: 0.9182
+  Fold 3 | Epoch 6/25 | Val Loss: 0.6732, Val F1: 0.9182
+  Fold 3 | Epoch 7/25 | Val Loss: 0.6559, Val F1: 0.9182
+  Fold 3 | Epoch 8/25 | Val Loss: 0.6370, Val F1: 0.9454
+  Fold 3 | Epoch 9/25 | Val Loss: 0.6338, Val F1: 0.9454
+  Fold 3 | Epoch 10/25 | Val Loss: 0.6427, Val F1: 0.9454
+  Fold 3 | Epoch 11/25 | Val Loss: 0.6518, Val F1: 0.9454
+  Fold 3 | Epoch 12/25 | Val Loss: 0.6731, Val F1: 0.9454
+  Fold 3 | Epoch 13/25 | Val Loss: 0.7057, Val F1: 0.9454
+  Fold 3 | Epoch 14/25 | Val Loss: 0.7380, Val F1: 0.9454
+  Fold 3 | Epoch 15/25 | Val Loss: 0.7575, Val F1: 0.9182
+  Fold 3 | Epoch 16/25 | Val Loss: 0.7729, Val F1: 0.9182
+  Fold 3 | Epoch 17/25 | Val Loss: 0.7969, Val F1: 0.9182
+  Fold 3 | Epoch 18/25 | Val Loss: 0.8189, Val F1: 0.9182
+  Fold 3 | Epoch 19/25 | Val Loss: 0.8500, Val F1: 0.9454
+  Fold 3 | Epoch 20/25 | Val Loss: 0.8757, Val F1: 0.9454
+  Fold 3 | Epoch 21/25 | Val Loss: 0.8897, Val F1: 0.9454
+  Fold 3 | Epoch 22/25 | Val Loss: 0.8925, Val F1: 0.9454
+  Fold 3 | Epoch 23/25 | Val Loss: 0.9073, Val F1: 0.9182
+  Fold 3 | Epoch 24/25 | Val Loss: 0.9115, Val F1: 0.9182
+  Fold 3 | Epoch 25/25 | Val Loss: 0.9200, Val F1: 0.9182
+
+--- Fold 4/5 ---
+  Fold 4 | Epoch 1/25 | Val Loss: 0.5223, Val F1: 0.9153
+  Fold 4 | Epoch 2/25 | Val Loss: 0.3011, Val F1: 0.9153
+  Fold 4 | Epoch 3/25 | Val Loss: 0.1736, Val F1: 0.9441
+  Fold 4 | Epoch 4/25 | Val Loss: 0.1154, Val F1: 0.9441
+  Fold 4 | Epoch 5/25 | Val Loss: 0.1095, Val F1: 0.9441
+  Fold 4 | Epoch 6/25 | Val Loss: 0.1112, Val F1: 0.9441
+  Fold 4 | Epoch 7/25 | Val Loss: 0.1225, Val F1: 0.9441
+  Fold 4 | Epoch 8/25 | Val Loss: 0.1247, Val F1: 0.9441
+  Fold 4 | Epoch 9/25 | Val Loss: 0.1200, Val F1: 0.9441
+  Fold 4 | Epoch 10/25 | Val Loss: 0.1072, Val F1: 0.9441
+  Fold 4 | Epoch 11/25 | Val Loss: 0.0930, Val F1: 0.9722
+  Fold 4 | Epoch 12/25 | Val Loss: 0.0812, Val F1: 0.9722
+  Fold 4 | Epoch 13/25 | Val Loss: 0.0784, Val F1: 0.9722
+  Fold 4 | Epoch 14/25 | Val Loss: 0.0818, Val F1: 0.9722
+  Fold 4 | Epoch 15/25 | Val Loss: 0.0829, Val F1: 0.9722
+  Fold 4 | Epoch 16/25 | Val Loss: 0.0524, Val F1: 0.9722
+  Fold 4 | Epoch 17/25 | Val Loss: 0.0273, Val F1: 0.9722
+  Fold 4 | Epoch 18/25 | Val Loss: 0.0185, Val F1: 1.0000
+  Fold 4 | Epoch 19/25 | Val Loss: 0.0143, Val F1: 1.0000
+  Fold 4 | Epoch 20/25 | Val Loss: 0.0111, Val F1: 1.0000
+  Fold 4 | Epoch 21/25 | Val Loss: 0.0097, Val F1: 1.0000
+  Fold 4 | Epoch 22/25 | Val Loss: 0.0071, Val F1: 1.0000
+  Fold 4 | Epoch 23/25 | Val Loss: 0.0052, Val F1: 1.0000
+  Fold 4 | Epoch 24/25 | Val Loss: 0.0043, Val F1: 1.0000
+  Fold 4 | Epoch 25/25 | Val Loss: 0.0045, Val F1: 1.0000
+
+--- Fold 5/5 ---
+C:\Users\bluei\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\conv.py:306: UserWarning: Plan failed with a cudnnException: CUDNN_BACKEND_EXECUTION_PLAN_DESCRIPTOR: cudnnFinalize Descriptor Failed cudnn_status: CUDNN_STATUS_NOT_SUPPORTED (Triggered internally at ..\aten\src\ATen\native\cudnn\Conv_v8.cpp:919.)
+  return F.conv1d(input, weight, bias, self.stride,
+  Fold 5 | Epoch 1/25 | Val Loss: 0.7550, Val F1: 0.8039
+  Fold 5 | Epoch 2/25 | Val Loss: 0.3759, Val F1: 0.8864
+  Fold 5 | Epoch 3/25 | Val Loss: 0.2866, Val F1: 0.9129
+  Fold 5 | Epoch 4/25 | Val Loss: 0.2591, Val F1: 0.8864
+  Fold 5 | Epoch 5/25 | Val Loss: 0.2851, Val F1: 0.8864
+  Fold 5 | Epoch 6/25 | Val Loss: 0.3080, Val F1: 0.8864
+  Fold 5 | Epoch 7/25 | Val Loss: 0.3327, Val F1: 0.8864
+  Fold 5 | Epoch 8/25 | Val Loss: 0.3668, Val F1: 0.8864
+  Fold 5 | Epoch 9/25 | Val Loss: 0.4036, Val F1: 0.8864
+  Fold 5 | Epoch 10/25 | Val Loss: 0.4225, Val F1: 0.8864
+  Fold 5 | Epoch 11/25 | Val Loss: 0.4209, Val F1: 0.8864
+  Fold 5 | Epoch 12/25 | Val Loss: 0.4040, Val F1: 0.9152
+  Fold 5 | Epoch 13/25 | Val Loss: 0.3927, Val F1: 0.9152
+  Fold 5 | Epoch 14/25 | Val Loss: 0.3921, Val F1: 0.9152
+  Fold 5 | Epoch 15/25 | Val Loss: 0.3648, Val F1: 0.9152
+  Fold 5 | Epoch 16/25 | Val Loss: 0.2962, Val F1: 0.9152
+  Fold 5 | Epoch 17/25 | Val Loss: 0.2428, Val F1: 0.9152
+  Fold 5 | Epoch 18/25 | Val Loss: 0.2304, Val F1: 0.9152
+  Fold 5 | Epoch 19/25 | Val Loss: 0.2283, Val F1: 0.9152
+  Fold 5 | Epoch 20/25 | Val Loss: 0.2223, Val F1: 0.9152
+  Fold 5 | Epoch 21/25 | Val Loss: 0.2228, Val F1: 0.9152
+  Fold 5 | Epoch 22/25 | Val Loss: 0.2224, Val F1: 0.9152
+  Fold 5 | Epoch 23/25 | Val Loss: 0.2164, Val F1: 0.9432
+  Fold 5 | Epoch 24/25 | Val Loss: 0.2217, Val F1: 0.9432
+  Fold 5 | Epoch 25/25 | Val Loss: 0.2119, Val F1: 0.9432
+
+--- 5-Fold CV Summary ---
+Mean Validation F1: 0.9723 ± 0.0349
+
+Unfreezing for SimpleCNN: model.fc1, model.fc2
+C:\Users\bluei\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\conv.py:306: UserWarning: Plan failed with a cudnnException: CUDNN_BACKEND_EXECUTION_PLAN_DESCRIPTOR: cudnnFinalize Descriptor Failed cudnn_status: CUDNN_STATUS_NOT_SUPPORTED (Triggered internally at ..\aten\src\ATen\native\cudnn\Conv_v8.cpp:919.)
+  return F.conv1d(input, weight, bias, self.stride,
+Step 15/150 - Test Loss: 0.0148, Accuracy: 1.0000, F1: 1.0000
+Step 30/150 - Test Loss: 0.0417, Accuracy: 0.9833, F1: 0.9833
+Step 45/150 - Test Loss: 0.0667, Accuracy: 0.9833, F1: 0.9833
+Step 60/150 - Test Loss: 0.0755, Accuracy: 0.9833, F1: 0.9833
+Step 75/150 - Test Loss: 0.0837, Accuracy: 0.9833, F1: 0.9833
+Step 90/150 - Test Loss: 0.0934, Accuracy: 0.9833, F1: 0.9833
+Step 105/150 - Test Loss: 0.0899, Accuracy: 0.9833, F1: 0.9833
+Step 120/150 - Test Loss: 0.0955, Accuracy: 0.9833, F1: 0.9833
+Step 135/150 - Test Loss: 0.1110, Accuracy: 0.9833, F1: 0.9833
+Step 150/150 - Test Loss: 0.1044, Accuracy: 0.9833, F1: 0.9833
+
+Final evaluation on the model from the last iteration...
+
+=== Final Test Results for simplecnn ===
+Test Loss       : 0.1044
+Test Accuracy   : 0.9833
+Macro F1 score  : 0.9833
+Confusion Matrix:
+[[20  0  0]
+ [ 0 20  0]
+ [ 1  0 19]]
+
+Saved final model to online_gesture_simplecnn.pth
+
+[CNN BiLSTM]
+PS C:\Capstone\arm-pose-estimation-main> & C:/Users/bluei/AppData/Local/Programs/Python/Python312/python.exe c:/Capstone/arm-pose-estimation-main/src/wear_mocap_ape/classification/fine_tune_online.py --train-csv online_vxo.csv --test-csv vxo_gesture.csv --pretrained offline_gesture_cnnbilstm.pth --model cnnbilstm --output online_gesture_cnnbilstm.pth  --lr 3e-4
+>> 
+==================================================
+### 1단계: cnnbilstm 모델 5-Fold 교차 검증 시작 ###
+==================================================
+
+--- Fold 1/5 ---
+C:\Users\bluei\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\conv.py:306: UserWarning: Plan failed with a cudnnException: CUDNN_BACKEND_EXECUTION_PLAN_DESCRIPTOR: cudnnFinalize Descriptor Failed cudnn_status: CUDNN_STATUS_NOT_SUPPORTED (Triggered internally at ..\aten\src\ATen\native\cudnn\Conv_v8.cpp:919.)
+  return F.conv1d(input, weight, bias, self.stride,
+  Fold 1 | Epoch 1/25 | Val Loss: 0.0232, Val F1: 1.0000
+  Fold 1 | Epoch 2/25 | Val Loss: 0.0227, Val F1: 1.0000
+  Fold 1 | Epoch 3/25 | Val Loss: 0.0224, Val F1: 1.0000
+  Fold 1 | Epoch 4/25 | Val Loss: 0.0218, Val F1: 1.0000
+  Fold 1 | Epoch 5/25 | Val Loss: 0.0214, Val F1: 1.0000
+  Fold 1 | Epoch 6/25 | Val Loss: 0.0211, Val F1: 1.0000
+  Fold 1 | Epoch 7/25 | Val Loss: 0.0208, Val F1: 1.0000
+  Fold 1 | Epoch 8/25 | Val Loss: 0.0204, Val F1: 1.0000
+  Fold 1 | Epoch 9/25 | Val Loss: 0.0200, Val F1: 1.0000
+  Fold 1 | Epoch 10/25 | Val Loss: 0.0197, Val F1: 1.0000
+  Fold 1 | Epoch 11/25 | Val Loss: 0.0194, Val F1: 1.0000
+  Fold 1 | Epoch 12/25 | Val Loss: 0.0192, Val F1: 1.0000
+  Fold 1 | Epoch 13/25 | Val Loss: 0.0189, Val F1: 1.0000
+  Fold 1 | Epoch 14/25 | Val Loss: 0.0186, Val F1: 1.0000
+  Fold 1 | Epoch 15/25 | Val Loss: 0.0182, Val F1: 1.0000
+  Fold 1 | Epoch 16/25 | Val Loss: 0.0181, Val F1: 1.0000
+  Fold 1 | Epoch 17/25 | Val Loss: 0.0178, Val F1: 1.0000
+  Fold 1 | Epoch 18/25 | Val Loss: 0.0175, Val F1: 1.0000
+  Fold 1 | Epoch 19/25 | Val Loss: 0.0173, Val F1: 1.0000
+  Fold 1 | Epoch 20/25 | Val Loss: 0.0170, Val F1: 1.0000
+  Fold 1 | Epoch 21/25 | Val Loss: 0.0167, Val F1: 1.0000
+  Fold 1 | Epoch 22/25 | Val Loss: 0.0165, Val F1: 1.0000
+  Fold 1 | Epoch 23/25 | Val Loss: 0.0163, Val F1: 1.0000
+  Fold 1 | Epoch 24/25 | Val Loss: 0.0163, Val F1: 1.0000
+  Fold 1 | Epoch 25/25 | Val Loss: 0.0162, Val F1: 1.0000
+
+--- Fold 2/5 ---
+  Fold 2 | Epoch 1/25 | Val Loss: 0.0214, Val F1: 1.0000
+  Fold 2 | Epoch 2/25 | Val Loss: 0.0220, Val F1: 1.0000
+  Fold 2 | Epoch 3/25 | Val Loss: 0.0225, Val F1: 1.0000
+  Fold 2 | Epoch 4/25 | Val Loss: 0.0231, Val F1: 1.0000
+  Fold 2 | Epoch 5/25 | Val Loss: 0.0236, Val F1: 0.9722
+  Fold 2 | Epoch 6/25 | Val Loss: 0.0241, Val F1: 0.9722
+  Fold 2 | Epoch 7/25 | Val Loss: 0.0247, Val F1: 0.9722
+  Fold 2 | Epoch 8/25 | Val Loss: 0.0253, Val F1: 0.9722
+  Fold 2 | Epoch 9/25 | Val Loss: 0.0258, Val F1: 0.9722
+  Fold 2 | Epoch 10/25 | Val Loss: 0.0265, Val F1: 0.9722
+  Fold 2 | Epoch 11/25 | Val Loss: 0.0271, Val F1: 0.9722
+  Fold 2 | Epoch 12/25 | Val Loss: 0.0276, Val F1: 0.9722
+  Fold 2 | Epoch 13/25 | Val Loss: 0.0282, Val F1: 0.9722
+  Fold 2 | Epoch 14/25 | Val Loss: 0.0289, Val F1: 0.9722
+  Fold 2 | Epoch 15/25 | Val Loss: 0.0296, Val F1: 0.9722
+  Fold 2 | Epoch 16/25 | Val Loss: 0.0302, Val F1: 0.9722
+  Fold 2 | Epoch 17/25 | Val Loss: 0.0308, Val F1: 0.9722
+  Fold 2 | Epoch 18/25 | Val Loss: 0.0315, Val F1: 0.9722
+  Fold 2 | Epoch 19/25 | Val Loss: 0.0321, Val F1: 0.9722
+  Fold 2 | Epoch 20/25 | Val Loss: 0.0327, Val F1: 0.9722
+  Fold 2 | Epoch 21/25 | Val Loss: 0.0332, Val F1: 0.9722
+  Fold 2 | Epoch 22/25 | Val Loss: 0.0338, Val F1: 0.9722
+  Fold 2 | Epoch 23/25 | Val Loss: 0.0344, Val F1: 0.9722
+  Fold 2 | Epoch 24/25 | Val Loss: 0.0350, Val F1: 0.9722
+  Fold 2 | Epoch 25/25 | Val Loss: 0.0355, Val F1: 0.9722
+
+--- Fold 3/5 ---
+  Fold 3 | Epoch 1/25 | Val Loss: 0.0015, Val F1: 1.0000
+  Fold 3 | Epoch 2/25 | Val Loss: 0.0015, Val F1: 1.0000
+  Fold 3 | Epoch 3/25 | Val Loss: 0.0014, Val F1: 1.0000
+  Fold 3 | Epoch 4/25 | Val Loss: 0.0014, Val F1: 1.0000
+  Fold 3 | Epoch 5/25 | Val Loss: 0.0014, Val F1: 1.0000
+  Fold 3 | Epoch 6/25 | Val Loss: 0.0013, Val F1: 1.0000
+  Fold 3 | Epoch 7/25 | Val Loss: 0.0013, Val F1: 1.0000
+  Fold 3 | Epoch 8/25 | Val Loss: 0.0013, Val F1: 1.0000
+  Fold 3 | Epoch 9/25 | Val Loss: 0.0013, Val F1: 1.0000
+  Fold 3 | Epoch 10/25 | Val Loss: 0.0012, Val F1: 1.0000
+  Fold 3 | Epoch 11/25 | Val Loss: 0.0012, Val F1: 1.0000
+  Fold 3 | Epoch 12/25 | Val Loss: 0.0012, Val F1: 1.0000
+  Fold 3 | Epoch 13/25 | Val Loss: 0.0012, Val F1: 1.0000
+  Fold 3 | Epoch 14/25 | Val Loss: 0.0012, Val F1: 1.0000
+  Fold 3 | Epoch 15/25 | Val Loss: 0.0011, Val F1: 1.0000
+  Fold 3 | Epoch 16/25 | Val Loss: 0.0011, Val F1: 1.0000
+  Fold 3 | Epoch 17/25 | Val Loss: 0.0011, Val F1: 1.0000
+  Fold 3 | Epoch 18/25 | Val Loss: 0.0011, Val F1: 1.0000
+  Fold 3 | Epoch 19/25 | Val Loss: 0.0011, Val F1: 1.0000
+  Fold 3 | Epoch 20/25 | Val Loss: 0.0011, Val F1: 1.0000
+  Fold 3 | Epoch 21/25 | Val Loss: 0.0010, Val F1: 1.0000
+  Fold 3 | Epoch 22/25 | Val Loss: 0.0010, Val F1: 1.0000
+  Fold 3 | Epoch 23/25 | Val Loss: 0.0010, Val F1: 1.0000
+  Fold 3 | Epoch 24/25 | Val Loss: 0.0010, Val F1: 1.0000
+  Fold 3 | Epoch 25/25 | Val Loss: 0.0010, Val F1: 1.0000
+
+--- Fold 4/5 ---
+  Fold 4 | Epoch 1/25 | Val Loss: 0.0857, Val F1: 0.9722
+  Fold 4 | Epoch 2/25 | Val Loss: 0.0854, Val F1: 0.9722
+  Fold 4 | Epoch 3/25 | Val Loss: 0.0848, Val F1: 0.9722
+  Fold 4 | Epoch 4/25 | Val Loss: 0.0842, Val F1: 0.9722
+  Fold 4 | Epoch 5/25 | Val Loss: 0.0836, Val F1: 0.9722
+  Fold 4 | Epoch 6/25 | Val Loss: 0.0831, Val F1: 0.9722
+  Fold 4 | Epoch 7/25 | Val Loss: 0.0826, Val F1: 0.9722
+  Fold 4 | Epoch 8/25 | Val Loss: 0.0821, Val F1: 0.9722
+  Fold 4 | Epoch 9/25 | Val Loss: 0.0817, Val F1: 0.9722
+  Fold 4 | Epoch 10/25 | Val Loss: 0.0811, Val F1: 0.9722
+  Fold 4 | Epoch 11/25 | Val Loss: 0.0805, Val F1: 0.9722
+  Fold 4 | Epoch 12/25 | Val Loss: 0.0801, Val F1: 0.9722
+  Fold 4 | Epoch 13/25 | Val Loss: 0.0797, Val F1: 0.9722
+  Fold 4 | Epoch 14/25 | Val Loss: 0.0792, Val F1: 0.9722
+  Fold 4 | Epoch 15/25 | Val Loss: 0.0789, Val F1: 0.9722
+  Fold 4 | Epoch 16/25 | Val Loss: 0.0785, Val F1: 0.9722
+  Fold 4 | Epoch 17/25 | Val Loss: 0.0782, Val F1: 0.9722
+  Fold 4 | Epoch 18/25 | Val Loss: 0.0779, Val F1: 0.9722
+  Fold 4 | Epoch 19/25 | Val Loss: 0.0775, Val F1: 0.9722
+  Fold 4 | Epoch 20/25 | Val Loss: 0.0772, Val F1: 0.9722
+  Fold 4 | Epoch 21/25 | Val Loss: 0.0770, Val F1: 0.9722
+  Fold 4 | Epoch 22/25 | Val Loss: 0.0767, Val F1: 0.9722
+  Fold 4 | Epoch 23/25 | Val Loss: 0.0763, Val F1: 0.9722
+  Fold 4 | Epoch 24/25 | Val Loss: 0.0760, Val F1: 0.9722
+  Fold 4 | Epoch 25/25 | Val Loss: 0.0757, Val F1: 0.9722
+
+--- Fold 5/5 ---
+C:\Users\bluei\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\conv.py:306: UserWarning: Plan failed with a cudnnException: CUDNN_BACKEND_EXECUTION_PLAN_DESCRIPTOR: cudnnFinalize Descriptor Failed cudnn_status: CUDNN_STATUS_NOT_SUPPORTED (Triggered internally at ..\aten\src\ATen\native\cudnn\Conv_v8.cpp:919.)
+  return F.conv1d(input, weight, bias, self.stride,
+  Fold 5 | Epoch 1/25 | Val Loss: 0.0689, Val F1: 0.9708
+  Fold 5 | Epoch 2/25 | Val Loss: 0.0680, Val F1: 0.9708
+  Fold 5 | Epoch 3/25 | Val Loss: 0.0674, Val F1: 0.9708
+  Fold 5 | Epoch 4/25 | Val Loss: 0.0668, Val F1: 0.9708
+  Fold 5 | Epoch 5/25 | Val Loss: 0.0662, Val F1: 0.9708
+  Fold 5 | Epoch 6/25 | Val Loss: 0.0657, Val F1: 0.9708
+  Fold 5 | Epoch 7/25 | Val Loss: 0.0652, Val F1: 0.9708
+  Fold 5 | Epoch 8/25 | Val Loss: 0.0650, Val F1: 0.9708
+  Fold 5 | Epoch 9/25 | Val Loss: 0.0646, Val F1: 0.9708
+  Fold 5 | Epoch 10/25 | Val Loss: 0.0642, Val F1: 0.9708
+  Fold 5 | Epoch 11/25 | Val Loss: 0.0638, Val F1: 0.9708
+  Fold 5 | Epoch 12/25 | Val Loss: 0.0634, Val F1: 0.9708
+  Fold 5 | Epoch 13/25 | Val Loss: 0.0631, Val F1: 0.9708
+  Fold 5 | Epoch 14/25 | Val Loss: 0.0628, Val F1: 0.9708
+  Fold 5 | Epoch 15/25 | Val Loss: 0.0624, Val F1: 0.9708
+  Fold 5 | Epoch 16/25 | Val Loss: 0.0621, Val F1: 0.9708
+  Fold 5 | Epoch 17/25 | Val Loss: 0.0619, Val F1: 0.9708
+  Fold 5 | Epoch 18/25 | Val Loss: 0.0617, Val F1: 0.9708
+  Fold 5 | Epoch 19/25 | Val Loss: 0.0613, Val F1: 0.9708
+  Fold 5 | Epoch 20/25 | Val Loss: 0.0611, Val F1: 0.9708
+  Fold 5 | Epoch 21/25 | Val Loss: 0.0607, Val F1: 0.9708
+  Fold 5 | Epoch 22/25 | Val Loss: 0.0604, Val F1: 0.9708
+  Fold 5 | Epoch 23/25 | Val Loss: 0.0603, Val F1: 0.9708
+  Fold 5 | Epoch 24/25 | Val Loss: 0.0601, Val F1: 0.9708
+  Fold 5 | Epoch 25/25 | Val Loss: 0.0598, Val F1: 0.9708
+
+--- 5-Fold CV Summary ---
+Mean Validation F1: 0.9830 ± 0.0139
+
+Unfreezing for cnnbilstm: model.fc
+C:\Users\bluei\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\conv.py:306: UserWarning: Plan failed with a cudnnException: CUDNN_BACKEND_EXECUTION_PLAN_DESCRIPTOR: cudnnFinalize Descriptor Failed cudnn_status: CUDNN_STATUS_NOT_SUPPORTED (Triggered internally at ..\aten\src\ATen\native\cudnn\Conv_v8.cpp:919.)
+  return F.conv1d(input, weight, bias, self.stride,
+Step 15/150 - Test Loss: 0.0127, Accuracy: 1.0000, F1: 1.0000
+Step 30/150 - Test Loss: 0.0118, Accuracy: 1.0000, F1: 1.0000
+Step 45/150 - Test Loss: 0.0111, Accuracy: 1.0000, F1: 1.0000
+Step 60/150 - Test Loss: 0.0104, Accuracy: 1.0000, F1: 1.0000
+Step 75/150 - Test Loss: 0.0099, Accuracy: 1.0000, F1: 1.0000
+Step 90/150 - Test Loss: 0.0093, Accuracy: 1.0000, F1: 1.0000
+Step 105/150 - Test Loss: 0.0088, Accuracy: 1.0000, F1: 1.0000
+Step 120/150 - Test Loss: 0.0084, Accuracy: 1.0000, F1: 1.0000
+Step 135/150 - Test Loss: 0.0080, Accuracy: 1.0000, F1: 1.0000
+Step 150/150 - Test Loss: 0.0077, Accuracy: 1.0000, F1: 1.0000
+
+Final evaluation on the model from the last iteration...
+
+=== Final Test Results for cnnbilstm ===
+Test Loss       : 0.0077
+Test Accuracy   : 1.0000
+Macro F1 score  : 1.0000
+Confusion Matrix:
+[[20  0  0]
+ [ 0 20  0]
+ [ 0  0 20]]
+
+Saved final model to online_gesture_cnnbilstm.pth
+
+[small TCN]
+PS C:\Capstone\arm-pose-estimation-main> & C:/Users/bluei/AppData/Local/Programs/Python/Python312/python.exe c:/Capstone/arm-pose-estimation-main/src/wear_mocap_ape/classification/fine_tune_online.py  --train-csv online_vxo.csv --test-csv vxo_gesture.csv --pretrained offline_gesture_smalltcn.pth --model smalltcn --output online_gesture_smalltcn.pth  --lr 1e-3  
+==================================================
+### 1단계: smalltcn 모델 5-Fold 교차 검증 시작 ###
+==================================================
+
+--- Fold 1/5 ---
+C:\Users\bluei\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\conv.py:306: UserWarning: Plan failed with a cudnnException: CUDNN_BACKEND_EXECUTION_PLAN_DESCRIPTOR: cudnnFinalize Descriptor Failed cudnn_status: CUDNN_STATUS_NOT_SUPPORTED (Triggered internally at ..\aten\src\ATen\native\cudnn\Conv_v8.cpp:919.)
+  return F.conv1d(input, weight, bias, self.stride,
+  Fold 1 | Epoch 1/25 | Val Loss: 0.2969, Val F1: 0.8583
+  Fold 1 | Epoch 2/25 | Val Loss: 0.2533, Val F1: 0.9444
+  Fold 1 | Epoch 3/25 | Val Loss: 0.2327, Val F1: 0.9444
+  Fold 1 | Epoch 4/25 | Val Loss: 0.2015, Val F1: 0.9444
+  Fold 1 | Epoch 5/25 | Val Loss: 0.1898, Val F1: 0.9154
+  Fold 1 | Epoch 6/25 | Val Loss: 0.1784, Val F1: 0.9154
+  Fold 1 | Epoch 7/25 | Val Loss: 0.1749, Val F1: 0.9154
+  Fold 1 | Epoch 8/25 | Val Loss: 0.1804, Val F1: 0.9154
+  Fold 1 | Epoch 9/25 | Val Loss: 0.1719, Val F1: 0.9154
+  Fold 1 | Epoch 10/25 | Val Loss: 0.1736, Val F1: 0.9154
+  Fold 1 | Epoch 11/25 | Val Loss: 0.1666, Val F1: 0.9154
+  Fold 1 | Epoch 12/25 | Val Loss: 0.1651, Val F1: 0.9154
+  Fold 1 | Epoch 13/25 | Val Loss: 0.1691, Val F1: 0.9154
+  Fold 1 | Epoch 14/25 | Val Loss: 0.1613, Val F1: 0.9154
+  Fold 1 | Epoch 15/25 | Val Loss: 0.1636, Val F1: 0.9154
+  Fold 1 | Epoch 16/25 | Val Loss: 0.1660, Val F1: 0.9154
+  Fold 1 | Epoch 17/25 | Val Loss: 0.1600, Val F1: 0.9154
+  Fold 1 | Epoch 18/25 | Val Loss: 0.1554, Val F1: 0.9154
+  Fold 1 | Epoch 19/25 | Val Loss: 0.1569, Val F1: 0.9154
+  Fold 1 | Epoch 20/25 | Val Loss: 0.1597, Val F1: 0.9154
+  Fold 1 | Epoch 21/25 | Val Loss: 0.1692, Val F1: 0.9154
+  Fold 1 | Epoch 22/25 | Val Loss: 0.1655, Val F1: 0.9154
+  Fold 1 | Epoch 23/25 | Val Loss: 0.1497, Val F1: 0.9154
+  Fold 1 | Epoch 24/25 | Val Loss: 0.1493, Val F1: 0.9154
+  Fold 1 | Epoch 25/25 | Val Loss: 0.1450, Val F1: 0.9154
+
+--- Fold 2/5 ---
+  Fold 2 | Epoch 1/25 | Val Loss: 0.1043, Val F1: 0.9722
+  Fold 2 | Epoch 2/25 | Val Loss: 0.0615, Val F1: 0.9722
+  Fold 2 | Epoch 3/25 | Val Loss: 0.0359, Val F1: 0.9722
+  Fold 2 | Epoch 4/25 | Val Loss: 0.0341, Val F1: 0.9722
+  Fold 2 | Epoch 5/25 | Val Loss: 0.0214, Val F1: 1.0000
+  Fold 2 | Epoch 6/25 | Val Loss: 0.0128, Val F1: 1.0000
+  Fold 2 | Epoch 7/25 | Val Loss: 0.0128, Val F1: 1.0000
+  Fold 2 | Epoch 8/25 | Val Loss: 0.0106, Val F1: 1.0000
+  Fold 2 | Epoch 9/25 | Val Loss: 0.0102, Val F1: 1.0000
+  Fold 2 | Epoch 10/25 | Val Loss: 0.0087, Val F1: 1.0000
+  Fold 2 | Epoch 11/25 | Val Loss: 0.0069, Val F1: 1.0000
+  Fold 2 | Epoch 12/25 | Val Loss: 0.0071, Val F1: 1.0000
+  Fold 2 | Epoch 13/25 | Val Loss: 0.0074, Val F1: 1.0000
+  Fold 2 | Epoch 14/25 | Val Loss: 0.0068, Val F1: 1.0000
+  Fold 2 | Epoch 15/25 | Val Loss: 0.0077, Val F1: 1.0000
+  Fold 2 | Epoch 16/25 | Val Loss: 0.0086, Val F1: 1.0000
+  Fold 2 | Epoch 17/25 | Val Loss: 0.0073, Val F1: 1.0000
+  Fold 2 | Epoch 18/25 | Val Loss: 0.0075, Val F1: 1.0000
+  Fold 2 | Epoch 19/25 | Val Loss: 0.0074, Val F1: 1.0000
+  Fold 2 | Epoch 20/25 | Val Loss: 0.0063, Val F1: 1.0000
+  Fold 2 | Epoch 21/25 | Val Loss: 0.0070, Val F1: 1.0000
+  Fold 2 | Epoch 22/25 | Val Loss: 0.0064, Val F1: 1.0000
+  Fold 2 | Epoch 23/25 | Val Loss: 0.0060, Val F1: 1.0000
+  Fold 2 | Epoch 24/25 | Val Loss: 0.0068, Val F1: 1.0000
+  Fold 2 | Epoch 25/25 | Val Loss: 0.0064, Val F1: 1.0000
+
+--- Fold 3/5 ---
+  Fold 3 | Epoch 1/25 | Val Loss: 0.0635, Val F1: 0.9722
+  Fold 3 | Epoch 2/25 | Val Loss: 0.0397, Val F1: 0.9722
+  Fold 3 | Epoch 3/25 | Val Loss: 0.0297, Val F1: 0.9722
+  Fold 3 | Epoch 4/25 | Val Loss: 0.0211, Val F1: 1.0000
+  Fold 3 | Epoch 5/25 | Val Loss: 0.0150, Val F1: 1.0000
+  Fold 3 | Epoch 6/25 | Val Loss: 0.0090, Val F1: 1.0000
+  Fold 3 | Epoch 7/25 | Val Loss: 0.0093, Val F1: 1.0000
+  Fold 3 | Epoch 8/25 | Val Loss: 0.0073, Val F1: 1.0000
+  Fold 3 | Epoch 9/25 | Val Loss: 0.0075, Val F1: 1.0000
+  Fold 3 | Epoch 10/25 | Val Loss: 0.0077, Val F1: 1.0000
+  Fold 3 | Epoch 11/25 | Val Loss: 0.0072, Val F1: 1.0000
+  Fold 3 | Epoch 12/25 | Val Loss: 0.0073, Val F1: 1.0000
+  Fold 3 | Epoch 13/25 | Val Loss: 0.0075, Val F1: 1.0000
+  Fold 3 | Epoch 14/25 | Val Loss: 0.0080, Val F1: 1.0000
+  Fold 3 | Epoch 15/25 | Val Loss: 0.0066, Val F1: 1.0000
+  Fold 3 | Epoch 16/25 | Val Loss: 0.0065, Val F1: 1.0000
+  Fold 3 | Epoch 17/25 | Val Loss: 0.0070, Val F1: 1.0000
+  Fold 3 | Epoch 18/25 | Val Loss: 0.0063, Val F1: 1.0000
+  Fold 3 | Epoch 19/25 | Val Loss: 0.0069, Val F1: 1.0000
+  Fold 3 | Epoch 20/25 | Val Loss: 0.0067, Val F1: 1.0000
+  Fold 3 | Epoch 21/25 | Val Loss: 0.0066, Val F1: 1.0000
+  Fold 3 | Epoch 22/25 | Val Loss: 0.0070, Val F1: 1.0000
+  Fold 3 | Epoch 23/25 | Val Loss: 0.0072, Val F1: 1.0000
+  Fold 3 | Epoch 24/25 | Val Loss: 0.0070, Val F1: 1.0000
+  Fold 3 | Epoch 25/25 | Val Loss: 0.0076, Val F1: 1.0000
+
+--- Fold 4/5 ---
+  Fold 4 | Epoch 1/25 | Val Loss: 0.0129, Val F1: 1.0000
+  Fold 4 | Epoch 2/25 | Val Loss: 0.0088, Val F1: 1.0000
+  Fold 4 | Epoch 3/25 | Val Loss: 0.0069, Val F1: 1.0000
+  Fold 4 | Epoch 4/25 | Val Loss: 0.0046, Val F1: 1.0000
+  Fold 4 | Epoch 5/25 | Val Loss: 0.0037, Val F1: 1.0000
+  Fold 4 | Epoch 6/25 | Val Loss: 0.0029, Val F1: 1.0000
+  Fold 4 | Epoch 7/25 | Val Loss: 0.0026, Val F1: 1.0000
+  Fold 4 | Epoch 8/25 | Val Loss: 0.0020, Val F1: 1.0000
+  Fold 4 | Epoch 9/25 | Val Loss: 0.0019, Val F1: 1.0000
+  Fold 4 | Epoch 10/25 | Val Loss: 0.0019, Val F1: 1.0000
+  Fold 4 | Epoch 11/25 | Val Loss: 0.0020, Val F1: 1.0000
+  Fold 4 | Epoch 12/25 | Val Loss: 0.0023, Val F1: 1.0000
+  Fold 4 | Epoch 13/25 | Val Loss: 0.0024, Val F1: 1.0000
+  Fold 4 | Epoch 14/25 | Val Loss: 0.0021, Val F1: 1.0000
+  Fold 4 | Epoch 15/25 | Val Loss: 0.0021, Val F1: 1.0000
+  Fold 4 | Epoch 16/25 | Val Loss: 0.0019, Val F1: 1.0000
+  Fold 4 | Epoch 17/25 | Val Loss: 0.0020, Val F1: 1.0000
+  Fold 4 | Epoch 18/25 | Val Loss: 0.0023, Val F1: 1.0000
+  Fold 4 | Epoch 19/25 | Val Loss: 0.0022, Val F1: 1.0000
+  Fold 4 | Epoch 20/25 | Val Loss: 0.0019, Val F1: 1.0000
+  Fold 4 | Epoch 21/25 | Val Loss: 0.0020, Val F1: 1.0000
+  Fold 4 | Epoch 22/25 | Val Loss: 0.0018, Val F1: 1.0000
+  Fold 4 | Epoch 23/25 | Val Loss: 0.0018, Val F1: 1.0000
+  Fold 4 | Epoch 24/25 | Val Loss: 0.0018, Val F1: 1.0000
+  Fold 4 | Epoch 25/25 | Val Loss: 0.0019, Val F1: 1.0000
+
+--- Fold 5/5 ---
+C:\Users\bluei\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\conv.py:306: UserWarning: Plan failed with a cudnnException: CUDNN_BACKEND_EXECUTION_PLAN_DESCRIPTOR: cudnnFinalize Descriptor Failed cudnn_status: CUDNN_STATUS_NOT_SUPPORTED (Triggered internally at ..\aten\src\ATen\native\cudnn\Conv_v8.cpp:919.)
+  return F.conv1d(input, weight, bias, self.stride,
+  Fold 5 | Epoch 1/25 | Val Loss: 0.4454, Val F1: 0.9103
+  Fold 5 | Epoch 2/25 | Val Loss: 0.3457, Val F1: 0.9103
+  Fold 5 | Epoch 3/25 | Val Loss: 0.3014, Val F1: 0.9103
+  Fold 5 | Epoch 4/25 | Val Loss: 0.2529, Val F1: 0.9103
+  Fold 5 | Epoch 5/25 | Val Loss: 0.2408, Val F1: 0.9103
+  Fold 5 | Epoch 6/25 | Val Loss: 0.2342, Val F1: 0.9103
+  Fold 5 | Epoch 7/25 | Val Loss: 0.1898, Val F1: 0.9103
+  Fold 5 | Epoch 8/25 | Val Loss: 0.1784, Val F1: 0.9103
+  Fold 5 | Epoch 9/25 | Val Loss: 0.1623, Val F1: 0.9103
+  Fold 5 | Epoch 10/25 | Val Loss: 0.1586, Val F1: 0.9103
+  Fold 5 | Epoch 11/25 | Val Loss: 0.1445, Val F1: 0.9410
+  Fold 5 | Epoch 12/25 | Val Loss: 0.1183, Val F1: 0.9410
+  Fold 5 | Epoch 13/25 | Val Loss: 0.1071, Val F1: 0.9410
+  Fold 5 | Epoch 14/25 | Val Loss: 0.1150, Val F1: 0.9410
+  Fold 5 | Epoch 15/25 | Val Loss: 0.1140, Val F1: 0.9410
+  Fold 5 | Epoch 16/25 | Val Loss: 0.1151, Val F1: 0.9410
+  Fold 5 | Epoch 17/25 | Val Loss: 0.1054, Val F1: 0.9410
+  Fold 5 | Epoch 18/25 | Val Loss: 0.1074, Val F1: 0.9410
+  Fold 5 | Epoch 19/25 | Val Loss: 0.1023, Val F1: 0.9410
+  Fold 5 | Epoch 20/25 | Val Loss: 0.0922, Val F1: 0.9708
+  Fold 5 | Epoch 21/25 | Val Loss: 0.0915, Val F1: 0.9708
+  Fold 5 | Epoch 22/25 | Val Loss: 0.0967, Val F1: 0.9410
+  Fold 5 | Epoch 23/25 | Val Loss: 0.1159, Val F1: 0.9410
+  Fold 5 | Epoch 24/25 | Val Loss: 0.0991, Val F1: 0.9410
+  Fold 5 | Epoch 25/25 | Val Loss: 0.1028, Val F1: 0.9410
+
+--- 5-Fold CV Summary ---
+Mean Validation F1: 0.9713 ± 0.0361
+
+Unfreezing for smalltcn: model.fc
+C:\Users\bluei\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\conv.py:306: UserWarning: Plan failed with a cudnnException: CUDNN_BACKEND_EXECUTION_PLAN_DESCRIPTOR: cudnnFinalize Descriptor Failed cudnn_status: CUDNN_STATUS_NOT_SUPPORTED (Triggered internally at ..\aten\src\ATen\native\cudnn\Conv_v8.cpp:919.)
+  return F.conv1d(input, weight, bias, self.stride,
+Step 15/150 - Test Loss: 0.0308, Accuracy: 0.9833, F1: 0.9833
+Step 30/150 - Test Loss: 0.0571, Accuracy: 0.9667, F1: 0.9666
+Step 45/150 - Test Loss: 0.0785, Accuracy: 0.9500, F1: 0.9497
+Step 60/150 - Test Loss: 0.1175, Accuracy: 0.9500, F1: 0.9497
+Step 75/150 - Test Loss: 0.1221, Accuracy: 0.9500, F1: 0.9497
+Step 90/150 - Test Loss: 0.1235, Accuracy: 0.9500, F1: 0.9497
+Step 105/150 - Test Loss: 0.1418, Accuracy: 0.9500, F1: 0.9497
+Step 120/150 - Test Loss: 0.1389, Accuracy: 0.9500, F1: 0.9497
+Step 135/150 - Test Loss: 0.1228, Accuracy: 0.9500, F1: 0.9497
+Step 150/150 - Test Loss: 0.1468, Accuracy: 0.9500, F1: 0.9497
+
+Final evaluation on the model from the last iteration...
+
+=== Final Test Results for smalltcn ===
+Test Loss       : 0.1468
+Test Accuracy   : 0.9500
+Macro F1 score  : 0.9497
+Confusion Matrix:
+[[20  0  0]
+ [ 3 17  0]
+ [ 0  0 20]]
+
+Saved final model to online_gesture_smalltcn.pth

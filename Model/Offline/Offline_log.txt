@@ -1,0 +1,752 @@
+[BiLSTM]
+
+PS C:\Capstone\arm-pose-estimation-main> & C:/Users/bluei/AppData/Local/Programs/Python/Python312/python.exe c:/Capstone/arm-pose-estimation-main/src/wear_mocap_ape/classification/train_gesture_offline.py --csv 6DMG_VXO.csv --model bilstm
+Training & evaluation start.
+Label distribution across dataset:
+  Label 0: 280
+  Label 1: 280
+  Label 2: 281
+Fold 1 | Iter 7 — Val Loss: 1.0869 | Acc: 0.3314 | F1: 0.1659
+Fold 1 | Iter 14 — Val Loss: 1.0586 | Acc: 0.6391 | F1: 0.5841
+Fold 1 | Iter 21 — Val Loss: 1.0211 | Acc: 0.9349 | F1: 0.9357
+Fold 1 | Iter 28 — Val Loss: 0.9718 | Acc: 0.9408 | F1: 0.9412
+Fold 1 | Iter 35 — Val Loss: 0.9040 | Acc: 0.9172 | F1: 0.9180
+Fold 1 | Iter 42 — Val Loss: 0.8140 | Acc: 0.8876 | F1: 0.8868
+Fold 1 | Iter 49 — Val Loss: 0.7044 | Acc: 0.8462 | F1: 0.8389
+Fold 1 | Iter 56 — Val Loss: 0.5913 | Acc: 0.8580 | F1: 0.8525
+Fold 1 | Iter 63 — Val Loss: 0.4996 | Acc: 0.8462 | F1: 0.8406
+Fold 1 | Iter 70 — Val Loss: 0.4304 | Acc: 0.8757 | F1: 0.8764
+Fold 1 | Iter 77 — Val Loss: 0.3660 | Acc: 0.8935 | F1: 0.8950
+Fold 1 | Iter 84 — Val Loss: 0.3017 | Acc: 0.9112 | F1: 0.9120
+Fold 1 | Iter 91 — Val Loss: 0.2455 | Acc: 0.9467 | F1: 0.9468
+Fold 1 | Iter 98 — Val Loss: 0.2061 | Acc: 0.9467 | F1: 0.9469
+Fold 1 | Iter 105 — Val Loss: 0.1851 | Acc: 0.9586 | F1: 0.9587
+Fold 1 | Iter 112 — Val Loss: 0.1746 | Acc: 0.9349 | F1: 0.9349
+Fold 1 | Iter 119 — Val Loss: 0.1582 | Acc: 0.9527 | F1: 0.9528
+Fold 1 | Iter 126 — Val Loss: 0.1452 | Acc: 0.9645 | F1: 0.9646
+Fold 1 | Iter 133 — Val Loss: 0.1425 | Acc: 0.9467 | F1: 0.9467
+Fold 1 | Iter 140 — Val Loss: 0.1277 | Acc: 0.9586 | F1: 0.9586
+Fold 1 | Iter 147 — Val Loss: 0.1223 | Acc: 0.9645 | F1: 0.9645
+Fold 1 | Iter 154 — Val Loss: 0.1129 | Acc: 0.9704 | F1: 0.9704
+Fold 1 | Iter 161 — Val Loss: 0.1058 | Acc: 0.9704 | F1: 0.9704
+Fold 1 | Iter 168 — Val Loss: 0.1001 | Acc: 0.9763 | F1: 0.9763
+Fold 1 | Iter 175 — Val Loss: 0.0974 | Acc: 0.9645 | F1: 0.9645
+Fold 1 | Iter 182 — Val Loss: 0.0881 | Acc: 0.9763 | F1: 0.9762
+Fold 1 | Iter 189 — Val Loss: 0.0823 | Acc: 0.9704 | F1: 0.9703
+Fold 1 | Iter 196 — Val Loss: 0.0779 | Acc: 0.9704 | F1: 0.9703
+Fold 1 | Iter 200 — Val Loss: 0.0770 | Acc: 0.9763 | F1: 0.9762
+Fold 2 | Iter 7 — Val Loss: 1.0804 | Acc: 0.4286 | F1: 0.3457
+Fold 2 | Iter 14 — Val Loss: 1.0500 | Acc: 0.8274 | F1: 0.8237
+Fold 2 | Iter 21 — Val Loss: 1.0071 | Acc: 0.8393 | F1: 0.8356
+Fold 2 | Iter 28 — Val Loss: 0.9480 | Acc: 0.7738 | F1: 0.7541
+Fold 2 | Iter 35 — Val Loss: 0.8660 | Acc: 0.7560 | F1: 0.7219
+Fold 2 | Iter 42 — Val Loss: 0.7590 | Acc: 0.7679 | F1: 0.7411
+Fold 2 | Iter 49 — Val Loss: 0.6442 | Acc: 0.7619 | F1: 0.7385
+Fold 2 | Iter 56 — Val Loss: 0.5537 | Acc: 0.7619 | F1: 0.7380
+Fold 2 | Iter 63 — Val Loss: 0.4935 | Acc: 0.7917 | F1: 0.7803
+Fold 2 | Iter 70 — Val Loss: 0.4436 | Acc: 0.8452 | F1: 0.8427
+Fold 2 | Iter 77 — Val Loss: 0.3996 | Acc: 0.8631 | F1: 0.8611
+Fold 2 | Iter 84 — Val Loss: 0.3627 | Acc: 0.8690 | F1: 0.8670
+Fold 2 | Iter 91 — Val Loss: 0.3316 | Acc: 0.8869 | F1: 0.8852
+Fold 2 | Iter 98 — Val Loss: 0.3057 | Acc: 0.8929 | F1: 0.8917
+Fold 2 | Iter 105 — Val Loss: 0.2758 | Acc: 0.9107 | F1: 0.9098
+Fold 2 | Iter 112 — Val Loss: 0.2508 | Acc: 0.9167 | F1: 0.9162
+Fold 2 | Iter 119 — Val Loss: 0.2254 | Acc: 0.9286 | F1: 0.9288
+Fold 2 | Iter 126 — Val Loss: 0.2099 | Acc: 0.9345 | F1: 0.9340
+Fold 2 | Iter 133 — Val Loss: 0.1889 | Acc: 0.9405 | F1: 0.9399
+Fold 2 | Iter 140 — Val Loss: 0.1728 | Acc: 0.9524 | F1: 0.9523
+Fold 2 | Iter 147 — Val Loss: 0.1624 | Acc: 0.9583 | F1: 0.9583
+Fold 2 | Iter 154 — Val Loss: 0.1650 | Acc: 0.9524 | F1: 0.9521
+Fold 2 | Iter 161 — Val Loss: 0.1425 | Acc: 0.9643 | F1: 0.9642
+Fold 2 | Iter 168 — Val Loss: 0.1414 | Acc: 0.9583 | F1: 0.9582
+Fold 2 | Iter 175 — Val Loss: 0.1352 | Acc: 0.9643 | F1: 0.9642
+Fold 2 | Iter 182 — Val Loss: 0.1260 | Acc: 0.9702 | F1: 0.9702
+Fold 2 | Iter 189 — Val Loss: 0.1243 | Acc: 0.9643 | F1: 0.9642
+Fold 2 | Iter 196 — Val Loss: 0.1213 | Acc: 0.9643 | F1: 0.9642
+Fold 2 | Iter 200 — Val Loss: 0.1137 | Acc: 0.9702 | F1: 0.9702
+Fold 3 | Iter 7 — Val Loss: 1.0835 | Acc: 0.6667 | F1: 0.6653
+Fold 3 | Iter 14 — Val Loss: 1.0523 | Acc: 0.7560 | F1: 0.7500
+Fold 3 | Iter 21 — Val Loss: 1.0098 | Acc: 0.8036 | F1: 0.8009
+Fold 3 | Iter 28 — Val Loss: 0.9539 | Acc: 0.8214 | F1: 0.8154
+Fold 3 | Iter 35 — Val Loss: 0.8779 | Acc: 0.8214 | F1: 0.8136
+Fold 3 | Iter 42 — Val Loss: 0.7773 | Acc: 0.8333 | F1: 0.8231
+Fold 3 | Iter 49 — Val Loss: 0.6596 | Acc: 0.8333 | F1: 0.8229
+Fold 3 | Iter 56 — Val Loss: 0.5511 | Acc: 0.8393 | F1: 0.8298
+Fold 3 | Iter 63 — Val Loss: 0.4670 | Acc: 0.8690 | F1: 0.8661
+Fold 3 | Iter 70 — Val Loss: 0.4026 | Acc: 0.8810 | F1: 0.8795
+Fold 3 | Iter 77 — Val Loss: 0.3437 | Acc: 0.9167 | F1: 0.9166
+Fold 3 | Iter 84 — Val Loss: 0.2942 | Acc: 0.8929 | F1: 0.8918
+Fold 3 | Iter 91 — Val Loss: 0.2617 | Acc: 0.8988 | F1: 0.8981
+Fold 3 | Iter 98 — Val Loss: 0.2247 | Acc: 0.9107 | F1: 0.9104
+Fold 3 | Iter 105 — Val Loss: 0.1955 | Acc: 0.9226 | F1: 0.9221
+Fold 3 | Iter 112 — Val Loss: 0.1741 | Acc: 0.9405 | F1: 0.9402
+Fold 3 | Iter 119 — Val Loss: 0.1537 | Acc: 0.9405 | F1: 0.9402
+Fold 3 | Iter 126 — Val Loss: 0.1429 | Acc: 0.9583 | F1: 0.9582
+Fold 3 | Iter 133 — Val Loss: 0.1297 | Acc: 0.9583 | F1: 0.9582
+Fold 3 | Iter 140 — Val Loss: 0.1271 | Acc: 0.9583 | F1: 0.9582
+Fold 3 | Iter 147 — Val Loss: 0.1147 | Acc: 0.9643 | F1: 0.9643
+Fold 3 | Iter 154 — Val Loss: 0.1076 | Acc: 0.9643 | F1: 0.9643
+Fold 3 | Iter 161 — Val Loss: 0.1020 | Acc: 0.9643 | F1: 0.9643
+Fold 3 | Iter 168 — Val Loss: 0.0946 | Acc: 0.9643 | F1: 0.9643
+Fold 3 | Iter 175 — Val Loss: 0.0879 | Acc: 0.9643 | F1: 0.9643
+Fold 3 | Iter 182 — Val Loss: 0.0859 | Acc: 0.9643 | F1: 0.9643
+Fold 3 | Iter 189 — Val Loss: 0.0744 | Acc: 0.9702 | F1: 0.9703
+Fold 3 | Iter 196 — Val Loss: 0.0791 | Acc: 0.9702 | F1: 0.9702
+Fold 3 | Iter 200 — Val Loss: 0.0932 | Acc: 0.9643 | F1: 0.9642
+Fold 4 | Iter 7 — Val Loss: 1.0827 | Acc: 0.4762 | F1: 0.3914
+Fold 4 | Iter 14 — Val Loss: 1.0513 | Acc: 0.7381 | F1: 0.7258
+Fold 4 | Iter 21 — Val Loss: 1.0081 | Acc: 0.6964 | F1: 0.6632
+Fold 4 | Iter 28 — Val Loss: 0.9487 | Acc: 0.6786 | F1: 0.6132
+Fold 4 | Iter 35 — Val Loss: 0.8672 | Acc: 0.7321 | F1: 0.6941
+Fold 4 | Iter 42 — Val Loss: 0.7639 | Acc: 0.7798 | F1: 0.7574
+Fold 4 | Iter 49 — Val Loss: 0.6548 | Acc: 0.7738 | F1: 0.7522
+Fold 4 | Iter 56 — Val Loss: 0.5662 | Acc: 0.7798 | F1: 0.7621
+Fold 4 | Iter 63 — Val Loss: 0.5026 | Acc: 0.8155 | F1: 0.8057
+Fold 4 | Iter 70 — Val Loss: 0.4565 | Acc: 0.8333 | F1: 0.8279
+Fold 4 | Iter 77 — Val Loss: 0.4072 | Acc: 0.8810 | F1: 0.8792
+Fold 4 | Iter 84 — Val Loss: 0.3568 | Acc: 0.9107 | F1: 0.9101
+Fold 4 | Iter 91 — Val Loss: 0.3077 | Acc: 0.9286 | F1: 0.9285
+Fold 4 | Iter 98 — Val Loss: 0.2554 | Acc: 0.9464 | F1: 0.9464
+Fold 4 | Iter 105 — Val Loss: 0.2082 | Acc: 0.9583 | F1: 0.9583
+Fold 4 | Iter 112 — Val Loss: 0.1750 | Acc: 0.9583 | F1: 0.9583
+Fold 4 | Iter 119 — Val Loss: 0.1559 | Acc: 0.9643 | F1: 0.9644
+Fold 4 | Iter 126 — Val Loss: 0.1392 | Acc: 0.9702 | F1: 0.9703
+Fold 4 | Iter 133 — Val Loss: 0.1357 | Acc: 0.9643 | F1: 0.9645
+Fold 4 | Iter 140 — Val Loss: 0.1210 | Acc: 0.9762 | F1: 0.9763
+Fold 4 | Iter 147 — Val Loss: 0.1155 | Acc: 0.9762 | F1: 0.9762
+Fold 4 | Iter 154 — Val Loss: 0.0982 | Acc: 0.9821 | F1: 0.9822
+Fold 4 | Iter 161 — Val Loss: 0.0964 | Acc: 0.9762 | F1: 0.9762
+Fold 4 | Iter 168 — Val Loss: 0.1031 | Acc: 0.9821 | F1: 0.9821
+Fold 4 | Iter 175 — Val Loss: 0.0747 | Acc: 0.9881 | F1: 0.9881
+Fold 4 | Iter 182 — Val Loss: 0.0741 | Acc: 0.9762 | F1: 0.9762
+Fold 4 | Iter 189 — Val Loss: 0.0687 | Acc: 0.9821 | F1: 0.9821
+Fold 4 | Iter 196 — Val Loss: 0.0575 | Acc: 0.9881 | F1: 0.9881
+Fold 4 | Iter 200 — Val Loss: 0.0622 | Acc: 0.9821 | F1: 0.9821
+Fold 5 | Iter 7 — Val Loss: 1.0768 | Acc: 0.5357 | F1: 0.4668
+Fold 5 | Iter 14 — Val Loss: 1.0469 | Acc: 0.8571 | F1: 0.8560
+Fold 5 | Iter 21 — Val Loss: 1.0049 | Acc: 0.8631 | F1: 0.8631
+Fold 5 | Iter 28 — Val Loss: 0.9481 | Acc: 0.8750 | F1: 0.8734
+Fold 5 | Iter 35 — Val Loss: 0.8707 | Acc: 0.8571 | F1: 0.8532
+Fold 5 | Iter 42 — Val Loss: 0.7703 | Acc: 0.8869 | F1: 0.8860
+Fold 5 | Iter 49 — Val Loss: 0.6549 | Acc: 0.8690 | F1: 0.8674
+Fold 5 | Iter 56 — Val Loss: 0.5521 | Acc: 0.8869 | F1: 0.8852
+Fold 5 | Iter 63 — Val Loss: 0.4760 | Acc: 0.8929 | F1: 0.8930
+Fold 5 | Iter 70 — Val Loss: 0.4202 | Acc: 0.8750 | F1: 0.8765
+Fold 5 | Iter 77 — Val Loss: 0.3631 | Acc: 0.8869 | F1: 0.8881
+Fold 5 | Iter 84 — Val Loss: 0.3023 | Acc: 0.9107 | F1: 0.9115
+Fold 5 | Iter 91 — Val Loss: 0.2573 | Acc: 0.9048 | F1: 0.9058
+Fold 5 | Iter 98 — Val Loss: 0.2360 | Acc: 0.9107 | F1: 0.9115
+Fold 5 | Iter 105 — Val Loss: 0.2090 | Acc: 0.9345 | F1: 0.9349
+Fold 5 | Iter 112 — Val Loss: 0.1819 | Acc: 0.9345 | F1: 0.9348
+Fold 5 | Iter 119 — Val Loss: 0.1932 | Acc: 0.9286 | F1: 0.9291
+Fold 5 | Iter 126 — Val Loss: 0.1612 | Acc: 0.9405 | F1: 0.9407
+Fold 5 | Iter 133 — Val Loss: 0.1547 | Acc: 0.9464 | F1: 0.9466
+Fold 5 | Iter 140 — Val Loss: 0.1553 | Acc: 0.9464 | F1: 0.9468
+Fold 5 | Iter 147 — Val Loss: 0.1437 | Acc: 0.9524 | F1: 0.9526
+Fold 5 | Iter 154 — Val Loss: 0.1743 | Acc: 0.9345 | F1: 0.9350
+Fold 5 | Iter 161 — Val Loss: 0.1316 | Acc: 0.9464 | F1: 0.9468
+Fold 5 | Iter 168 — Val Loss: 0.1209 | Acc: 0.9583 | F1: 0.9585
+Fold 5 | Iter 175 — Val Loss: 0.1333 | Acc: 0.9464 | F1: 0.9468
+Fold 5 | Iter 182 — Val Loss: 0.1267 | Acc: 0.9464 | F1: 0.9468
+Fold 5 | Iter 189 — Val Loss: 0.1201 | Acc: 0.9524 | F1: 0.9526
+Fold 5 | Iter 196 — Val Loss: 0.1262 | Acc: 0.9464 | F1: 0.9468
+Fold 5 | Iter 200 — Val Loss: 0.1242 | Acc: 0.9464 | F1: 0.9468
+
+CV Summary:
+  Fold 1: Loss=0.0770, Acc=0.9763
+  Fold 2: Loss=0.1137, Acc=0.9702
+  Fold 3: Loss=0.0932, Acc=0.9643
+  Fold 4: Loss=0.0622, Acc=0.9821
+  Fold 5: Loss=0.1242, Acc=0.9464
+  Mean   : Loss=0.0941±0.0228, Acc=0.9679±0.0123
+
+Retraining on full dataset (no validation split)...
+
+Final model trained on all data | Loss: 0.0719 | Acc: 0.9774
+Saved final model to offline_gesture_bilstm.pth
+Training & evaluation complete.
+
+[GRU]
+PS C:\Capstone\arm-pose-estimation-main> & C:/Users/bluei/AppData/Local/Programs/Python/Python312/python.exe c:/Capstone/arm-pose-estimation-main/src/wear_mocap_ape/classification/train_gesture_offline.py --csv 6DMG_VXO.csv --model gru  --batch-size 64 --lr 3e-4 --iterations 100
+Training & evaluation start.
+Label distribution across dataset:
+  Label 0: 280
+  Label 1: 280
+  Label 2: 281
+Fold 1 | Iter 11 — Val Loss: 0.9766 | Acc: 0.7574 | F1: 0.7483
+Fold 1 | Iter 22 — Val Loss: 0.7642 | Acc: 0.7160 | F1: 0.6888
+Fold 1 | Iter 33 — Val Loss: 0.6361 | Acc: 0.7219 | F1: 0.7045
+Fold 1 | Iter 44 — Val Loss: 0.4883 | Acc: 0.8462 | F1: 0.8476
+Fold 1 | Iter 55 — Val Loss: 0.3826 | Acc: 0.8757 | F1: 0.8773
+Fold 1 | Iter 66 — Val Loss: 0.3278 | Acc: 0.8757 | F1: 0.8768
+Fold 1 | Iter 77 — Val Loss: 0.3502 | Acc: 0.8402 | F1: 0.8410
+Fold 1 | Iter 88 — Val Loss: 0.2458 | Acc: 0.9053 | F1: 0.9054
+Fold 1 | Iter 99 — Val Loss: 0.1986 | Acc: 0.9408 | F1: 0.9410
+Fold 1 | Iter 100 — Val Loss: 0.2022 | Acc: 0.9408 | F1: 0.9411
+Fold 2 | Iter 11 — Val Loss: 1.0063 | Acc: 0.6845 | F1: 0.6843
+Fold 2 | Iter 22 — Val Loss: 0.8157 | Acc: 0.7560 | F1: 0.7528
+Fold 2 | Iter 33 — Val Loss: 0.5928 | Acc: 0.7798 | F1: 0.7750
+Fold 2 | Iter 44 — Val Loss: 0.5266 | Acc: 0.7857 | F1: 0.7829
+Fold 2 | Iter 55 — Val Loss: 0.4792 | Acc: 0.8333 | F1: 0.8310
+Fold 2 | Iter 66 — Val Loss: 0.4189 | Acc: 0.8214 | F1: 0.8177
+Fold 2 | Iter 77 — Val Loss: 0.3770 | Acc: 0.8512 | F1: 0.8483
+Fold 2 | Iter 88 — Val Loss: 0.3663 | Acc: 0.8690 | F1: 0.8678
+Fold 2 | Iter 99 — Val Loss: 0.3669 | Acc: 0.8631 | F1: 0.8608
+Fold 2 | Iter 100 — Val Loss: 0.3620 | Acc: 0.8631 | F1: 0.8608
+Fold 3 | Iter 11 — Val Loss: 0.9886 | Acc: 0.7381 | F1: 0.7429
+Fold 3 | Iter 22 — Val Loss: 0.7543 | Acc: 0.8095 | F1: 0.8063
+Fold 3 | Iter 33 — Val Loss: 0.5335 | Acc: 0.8036 | F1: 0.8025
+Fold 3 | Iter 44 — Val Loss: 0.4279 | Acc: 0.8036 | F1: 0.8049
+Fold 3 | Iter 55 — Val Loss: 0.3612 | Acc: 0.8810 | F1: 0.8814
+Fold 3 | Iter 66 — Val Loss: 0.3576 | Acc: 0.8750 | F1: 0.8760
+Fold 3 | Iter 77 — Val Loss: 0.3145 | Acc: 0.8929 | F1: 0.8930
+Fold 3 | Iter 88 — Val Loss: 0.2742 | Acc: 0.9107 | F1: 0.9113
+Fold 3 | Iter 99 — Val Loss: 0.1993 | Acc: 0.9464 | F1: 0.9465
+Fold 3 | Iter 100 — Val Loss: 0.1907 | Acc: 0.9583 | F1: 0.9583
+Fold 4 | Iter 11 — Val Loss: 1.0049 | Acc: 0.6369 | F1: 0.6211
+Fold 4 | Iter 22 — Val Loss: 0.7997 | Acc: 0.7381 | F1: 0.7125
+Fold 4 | Iter 33 — Val Loss: 0.5623 | Acc: 0.7500 | F1: 0.7280
+Fold 4 | Iter 44 — Val Loss: 0.4123 | Acc: 0.8393 | F1: 0.8388
+Fold 4 | Iter 55 — Val Loss: 0.3138 | Acc: 0.8929 | F1: 0.8933
+Fold 4 | Iter 66 — Val Loss: 0.2808 | Acc: 0.9226 | F1: 0.9229
+Fold 4 | Iter 77 — Val Loss: 0.2438 | Acc: 0.9405 | F1: 0.9407
+Fold 4 | Iter 88 — Val Loss: 0.2024 | Acc: 0.9583 | F1: 0.9583
+Fold 4 | Iter 99 — Val Loss: 0.1674 | Acc: 0.9583 | F1: 0.9584
+Fold 4 | Iter 100 — Val Loss: 0.1639 | Acc: 0.9583 | F1: 0.9584
+Fold 5 | Iter 11 — Val Loss: 0.9924 | Acc: 0.6905 | F1: 0.6875
+Fold 5 | Iter 22 — Val Loss: 0.8001 | Acc: 0.6845 | F1: 0.6668
+Fold 5 | Iter 33 — Val Loss: 0.6358 | Acc: 0.7262 | F1: 0.7190
+Fold 5 | Iter 44 — Val Loss: 0.5222 | Acc: 0.7798 | F1: 0.7812
+Fold 5 | Iter 55 — Val Loss: 0.4440 | Acc: 0.8274 | F1: 0.8281
+Fold 5 | Iter 66 — Val Loss: 0.3872 | Acc: 0.8571 | F1: 0.8580
+Fold 5 | Iter 77 — Val Loss: 0.3222 | Acc: 0.9048 | F1: 0.9060
+Fold 5 | Iter 88 — Val Loss: 0.2704 | Acc: 0.9286 | F1: 0.9293
+Fold 5 | Iter 99 — Val Loss: 0.2202 | Acc: 0.9405 | F1: 0.9406
+Fold 5 | Iter 100 — Val Loss: 0.2194 | Acc: 0.9405 | F1: 0.9406
+
+CV Summary:
+  Fold 1: Loss=0.2022, Acc=0.9408
+  Fold 2: Loss=0.3620, Acc=0.8631
+  Fold 3: Loss=0.1907, Acc=0.9583
+  Fold 4: Loss=0.1639, Acc=0.9583
+  Fold 5: Loss=0.2194, Acc=0.9405
+  Mean   : Loss=0.2276±0.0696, Acc=0.9322±0.0355
+
+Retraining on full dataset (no validation split)...
+
+Final model trained on all data | Loss: 0.2501 | Acc: 0.9168
+Saved final model to offline_gesture_gru.pth
+Training & evaluation complete.
+
+[Simple CNN]
+PS C:\Capstone\arm-pose-estimation-main> & C:/Users/bluei/AppData/Local/Programs/Python/Python312/python.exe c:/Capstone/arm-pose-estimation-main/src/wear_mocap_ape/classification/train_gesture_offline.py --csv 6DMG_VXO.csv --model simplecnn                             
+Training & evaluation start.
+Label distribution across dataset:
+  Label 0: 280
+  Label 1: 280
+  Label 2: 281
+C:\Users\bluei\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\conv.py:306: UserWarning: Plan failed with a cudnnException: CUDNN_BACKEND_EXECUTION_PLAN_DESCRIPTOR: cudnnFinalize Descriptor Failed cudnn_status: CUDNN_STATUS_NOT_SUPPORTED (Triggered internally at ..\aten\src\ATen\native\cudnn\Conv_v8.cpp:919.)
+  return F.conv1d(input, weight, bias, self.stride,
+Fold 1 | Iter 7 — Val Loss: 1.1021 | Acc: 0.3314 | F1: 0.1659
+Fold 1 | Iter 14 — Val Loss: 0.7645 | Acc: 0.6982 | F1: 0.6991
+Fold 1 | Iter 21 — Val Loss: 0.2790 | Acc: 0.9053 | F1: 0.9049
+Fold 1 | Iter 28 — Val Loss: 0.2211 | Acc: 0.8994 | F1: 0.8994
+Fold 1 | Iter 35 — Val Loss: 0.1987 | Acc: 0.9586 | F1: 0.9584
+Fold 1 | Iter 42 — Val Loss: 0.1130 | Acc: 0.9645 | F1: 0.9644
+Fold 1 | Iter 49 — Val Loss: 0.0838 | Acc: 0.9822 | F1: 0.9822
+Fold 1 | Iter 56 — Val Loss: 0.1179 | Acc: 0.9586 | F1: 0.9585
+Fold 1 | Iter 63 — Val Loss: 0.1896 | Acc: 0.9467 | F1: 0.9465
+Fold 1 | Iter 70 — Val Loss: 0.1005 | Acc: 0.9645 | F1: 0.9645
+Fold 1 | Iter 77 — Val Loss: 0.1362 | Acc: 0.9645 | F1: 0.9644
+Fold 1 | Iter 84 — Val Loss: 0.0134 | Acc: 0.9941 | F1: 0.9941
+Fold 1 | Iter 91 — Val Loss: 0.1684 | Acc: 0.9645 | F1: 0.9643
+Fold 1 | Iter 98 — Val Loss: 0.0837 | Acc: 0.9763 | F1: 0.9763
+Fold 1 | Iter 105 — Val Loss: 0.1038 | Acc: 0.9763 | F1: 0.9763
+Fold 1 | Iter 112 — Val Loss: 0.1045 | Acc: 0.9822 | F1: 0.9822
+Fold 1 | Iter 119 — Val Loss: 0.0384 | Acc: 0.9822 | F1: 0.9822
+Fold 1 | Iter 126 — Val Loss: 0.1450 | Acc: 0.9645 | F1: 0.9645
+Fold 1 | Iter 133 — Val Loss: 0.1068 | Acc: 0.9586 | F1: 0.9585
+Fold 1 | Iter 140 — Val Loss: 0.1286 | Acc: 0.9704 | F1: 0.9704
+Fold 1 | Iter 147 — Val Loss: 0.0701 | Acc: 0.9822 | F1: 0.9823
+Fold 1 | Iter 154 — Val Loss: 0.0436 | Acc: 0.9822 | F1: 0.9822
+Fold 1 | Iter 161 — Val Loss: 0.3809 | Acc: 0.9586 | F1: 0.9585
+Fold 1 | Iter 168 — Val Loss: 0.1035 | Acc: 0.9704 | F1: 0.9703
+Fold 1 | Iter 175 — Val Loss: 0.1677 | Acc: 0.9586 | F1: 0.9586
+Fold 1 | Iter 182 — Val Loss: 0.3539 | Acc: 0.9645 | F1: 0.9640
+Fold 1 | Iter 189 — Val Loss: 0.4009 | Acc: 0.9053 | F1: 0.9055
+Fold 1 | Iter 196 — Val Loss: 0.2667 | Acc: 0.9349 | F1: 0.9352
+Fold 1 | Iter 200 — Val Loss: 0.1314 | Acc: 0.9527 | F1: 0.9527
+C:\Users\bluei\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\conv.py:306: UserWarning: Plan failed with a cudnnException: CUDNN_BACKEND_EXECUTION_PLAN_DESCRIPTOR: cudnnFinalize Descriptor Failed cudnn_status: CUDNN_STATUS_NOT_SUPPORTED (Triggered internally at ..\aten\src\ATen\native\cudnn\Conv_v8.cpp:919.)
+  return F.conv1d(input, weight, bias, self.stride,
+Fold 2 | Iter 7 — Val Loss: 1.0362 | Acc: 0.3333 | F1: 0.1808
+Fold 2 | Iter 14 — Val Loss: 0.8333 | Acc: 0.7262 | F1: 0.7176
+Fold 2 | Iter 21 — Val Loss: 0.6074 | Acc: 0.8095 | F1: 0.8084
+Fold 2 | Iter 28 — Val Loss: 0.4436 | Acc: 0.8393 | F1: 0.8399
+Fold 2 | Iter 35 — Val Loss: 0.4998 | Acc: 0.8333 | F1: 0.8319
+Fold 2 | Iter 42 — Val Loss: 0.2904 | Acc: 0.8988 | F1: 0.8994
+Fold 2 | Iter 49 — Val Loss: 0.2430 | Acc: 0.9226 | F1: 0.9229
+Fold 2 | Iter 56 — Val Loss: 0.1820 | Acc: 0.9345 | F1: 0.9346
+Fold 2 | Iter 63 — Val Loss: 0.2289 | Acc: 0.9345 | F1: 0.9348
+Fold 2 | Iter 70 — Val Loss: 0.2213 | Acc: 0.9048 | F1: 0.9053
+Fold 2 | Iter 77 — Val Loss: 0.1528 | Acc: 0.9464 | F1: 0.9464
+Fold 2 | Iter 84 — Val Loss: 0.1493 | Acc: 0.9583 | F1: 0.9585
+Fold 2 | Iter 91 — Val Loss: 0.1799 | Acc: 0.9583 | F1: 0.9585
+Fold 2 | Iter 98 — Val Loss: 0.1718 | Acc: 0.9583 | F1: 0.9584
+Fold 2 | Iter 105 — Val Loss: 0.1867 | Acc: 0.9643 | F1: 0.9644
+Fold 2 | Iter 112 — Val Loss: 0.1246 | Acc: 0.9583 | F1: 0.9585
+Fold 2 | Iter 119 — Val Loss: 0.1070 | Acc: 0.9583 | F1: 0.9584
+Fold 2 | Iter 126 — Val Loss: 0.1015 | Acc: 0.9702 | F1: 0.9703
+Fold 2 | Iter 133 — Val Loss: 0.0728 | Acc: 0.9702 | F1: 0.9704
+Fold 2 | Iter 140 — Val Loss: 0.0558 | Acc: 0.9762 | F1: 0.9761
+Fold 2 | Iter 147 — Val Loss: 0.1690 | Acc: 0.9464 | F1: 0.9466
+Fold 2 | Iter 154 — Val Loss: 0.0472 | Acc: 0.9762 | F1: 0.9762
+Fold 2 | Iter 161 — Val Loss: 0.0655 | Acc: 0.9702 | F1: 0.9703
+Fold 2 | Iter 168 — Val Loss: 0.1174 | Acc: 0.9524 | F1: 0.9525
+Fold 2 | Iter 175 — Val Loss: 0.2804 | Acc: 0.9405 | F1: 0.9411
+Fold 2 | Iter 182 — Val Loss: 0.0941 | Acc: 0.9821 | F1: 0.9821
+Fold 2 | Iter 189 — Val Loss: 0.4767 | Acc: 0.9226 | F1: 0.9226
+Fold 2 | Iter 196 — Val Loss: 0.2640 | Acc: 0.9226 | F1: 0.9219
+Fold 2 | Iter 200 — Val Loss: 0.1513 | Acc: 0.9583 | F1: 0.9583
+Fold 3 | Iter 7 — Val Loss: 0.5406 | Acc: 0.8274 | F1: 0.8269
+Fold 3 | Iter 14 — Val Loss: 0.2516 | Acc: 0.8929 | F1: 0.8931
+Fold 3 | Iter 21 — Val Loss: 0.1840 | Acc: 0.9405 | F1: 0.9403
+Fold 3 | Iter 28 — Val Loss: 0.0980 | Acc: 0.9643 | F1: 0.9639
+Fold 3 | Iter 35 — Val Loss: 0.0431 | Acc: 0.9881 | F1: 0.9881
+Fold 3 | Iter 42 — Val Loss: 0.0664 | Acc: 0.9881 | F1: 0.9880
+Fold 3 | Iter 49 — Val Loss: 0.0172 | Acc: 0.9940 | F1: 0.9940
+Fold 3 | Iter 56 — Val Loss: 0.1449 | Acc: 0.9583 | F1: 0.9583
+Fold 3 | Iter 63 — Val Loss: 0.0470 | Acc: 0.9881 | F1: 0.9881
+Fold 3 | Iter 70 — Val Loss: 0.1798 | Acc: 0.9524 | F1: 0.9528
+Fold 3 | Iter 77 — Val Loss: 0.0128 | Acc: 1.0000 | F1: 1.0000
+Fold 3 | Iter 84 — Val Loss: 0.0452 | Acc: 0.9821 | F1: 0.9822
+Fold 3 | Iter 91 — Val Loss: 0.0397 | Acc: 0.9940 | F1: 0.9940
+Fold 3 | Iter 98 — Val Loss: 0.0720 | Acc: 0.9821 | F1: 0.9821
+Fold 3 | Iter 105 — Val Loss: 0.1644 | Acc: 0.9524 | F1: 0.9522
+Fold 3 | Iter 112 — Val Loss: 0.0524 | Acc: 0.9881 | F1: 0.9881
+Fold 3 | Iter 119 — Val Loss: 0.0743 | Acc: 0.9881 | F1: 0.9881
+Fold 3 | Iter 126 — Val Loss: 0.1070 | Acc: 0.9821 | F1: 0.9821
+Fold 3 | Iter 133 — Val Loss: 0.0442 | Acc: 0.9821 | F1: 0.9821
+Fold 3 | Iter 140 — Val Loss: 0.0080 | Acc: 0.9940 | F1: 0.9940
+Fold 3 | Iter 147 — Val Loss: 0.0184 | Acc: 0.9881 | F1: 0.9880
+Fold 3 | Iter 154 — Val Loss: 0.1551 | Acc: 0.9762 | F1: 0.9763
+Fold 3 | Iter 161 — Val Loss: 0.0811 | Acc: 0.9881 | F1: 0.9881
+Fold 3 | Iter 168 — Val Loss: 0.0665 | Acc: 0.9881 | F1: 0.9881
+Fold 3 | Iter 175 — Val Loss: 0.0722 | Acc: 0.9881 | F1: 0.9881
+Fold 3 | Iter 182 — Val Loss: 0.1432 | Acc: 0.9881 | F1: 0.9881
+Fold 3 | Iter 189 — Val Loss: 0.1056 | Acc: 0.9821 | F1: 0.9821
+Fold 3 | Iter 196 — Val Loss: 0.0064 | Acc: 1.0000 | F1: 1.0000
+Fold 3 | Iter 200 — Val Loss: 0.0042 | Acc: 1.0000 | F1: 1.0000
+Fold 4 | Iter 7 — Val Loss: 1.0346 | Acc: 0.3452 | F1: 0.1912
+Fold 4 | Iter 14 — Val Loss: 0.5663 | Acc: 0.7560 | F1: 0.7415
+Fold 4 | Iter 21 — Val Loss: 0.2435 | Acc: 0.8869 | F1: 0.8857
+Fold 4 | Iter 28 — Val Loss: 0.3413 | Acc: 0.8929 | F1: 0.8931
+Fold 4 | Iter 35 — Val Loss: 0.1136 | Acc: 0.9643 | F1: 0.9640
+Fold 4 | Iter 42 — Val Loss: 0.3068 | Acc: 0.9464 | F1: 0.9465
+Fold 4 | Iter 49 — Val Loss: 0.0383 | Acc: 0.9940 | F1: 0.9940
+Fold 4 | Iter 56 — Val Loss: 0.1871 | Acc: 0.9405 | F1: 0.9410
+Fold 4 | Iter 63 — Val Loss: 0.1188 | Acc: 0.9702 | F1: 0.9702
+Fold 4 | Iter 70 — Val Loss: 0.1286 | Acc: 0.9643 | F1: 0.9641
+Fold 4 | Iter 77 — Val Loss: 0.0798 | Acc: 0.9702 | F1: 0.9703
+Fold 4 | Iter 84 — Val Loss: 0.0178 | Acc: 0.9881 | F1: 0.9881
+Fold 4 | Iter 91 — Val Loss: 0.0294 | Acc: 0.9881 | F1: 0.9881
+Fold 4 | Iter 98 — Val Loss: 0.0897 | Acc: 0.9702 | F1: 0.9705
+Fold 4 | Iter 105 — Val Loss: 0.0586 | Acc: 0.9821 | F1: 0.9822
+Fold 4 | Iter 112 — Val Loss: 0.0393 | Acc: 0.9762 | F1: 0.9763
+Fold 4 | Iter 119 — Val Loss: 0.0536 | Acc: 0.9821 | F1: 0.9821
+Fold 4 | Iter 126 — Val Loss: 0.0343 | Acc: 0.9881 | F1: 0.9880
+Fold 4 | Iter 133 — Val Loss: 0.0402 | Acc: 0.9821 | F1: 0.9821
+Fold 4 | Iter 140 — Val Loss: 0.0305 | Acc: 0.9881 | F1: 0.9881
+Fold 4 | Iter 147 — Val Loss: 0.0508 | Acc: 0.9881 | F1: 0.9881
+Fold 4 | Iter 154 — Val Loss: 0.0481 | Acc: 0.9940 | F1: 0.9940
+Fold 4 | Iter 161 — Val Loss: 0.2364 | Acc: 0.9643 | F1: 0.9642
+Fold 4 | Iter 168 — Val Loss: 0.0416 | Acc: 0.9821 | F1: 0.9821
+Fold 4 | Iter 175 — Val Loss: 0.0439 | Acc: 0.9821 | F1: 0.9821
+Fold 4 | Iter 182 — Val Loss: 0.1521 | Acc: 0.9464 | F1: 0.9466
+Fold 4 | Iter 189 — Val Loss: 0.1389 | Acc: 0.9762 | F1: 0.9762
+Fold 4 | Iter 196 — Val Loss: 0.2323 | Acc: 0.9583 | F1: 0.9582
+Fold 4 | Iter 200 — Val Loss: 0.1414 | Acc: 0.9643 | F1: 0.9643
+Fold 5 | Iter 7 — Val Loss: 0.8704 | Acc: 0.5893 | F1: 0.5107
+Fold 5 | Iter 14 — Val Loss: 0.4962 | Acc: 0.7976 | F1: 0.7982
+Fold 5 | Iter 21 — Val Loss: 0.4452 | Acc: 0.8155 | F1: 0.8131
+Fold 5 | Iter 28 — Val Loss: 0.2731 | Acc: 0.9048 | F1: 0.9047
+Fold 5 | Iter 35 — Val Loss: 0.2986 | Acc: 0.8929 | F1: 0.8924
+Fold 5 | Iter 42 — Val Loss: 0.2120 | Acc: 0.9345 | F1: 0.9349
+Fold 5 | Iter 49 — Val Loss: 0.1456 | Acc: 0.9464 | F1: 0.9456
+Fold 5 | Iter 56 — Val Loss: 0.2078 | Acc: 0.9286 | F1: 0.9286
+Fold 5 | Iter 63 — Val Loss: 0.1624 | Acc: 0.9524 | F1: 0.9523
+Fold 5 | Iter 70 — Val Loss: 0.2900 | Acc: 0.9464 | F1: 0.9461
+Fold 5 | Iter 77 — Val Loss: 0.2198 | Acc: 0.9524 | F1: 0.9524
+Fold 5 | Iter 84 — Val Loss: 0.1842 | Acc: 0.9821 | F1: 0.9822
+Fold 5 | Iter 91 — Val Loss: 0.2219 | Acc: 0.9643 | F1: 0.9643
+Fold 5 | Iter 98 — Val Loss: 0.1556 | Acc: 0.9524 | F1: 0.9524
+Fold 5 | Iter 105 — Val Loss: 0.1547 | Acc: 0.9524 | F1: 0.9525
+Fold 5 | Iter 112 — Val Loss: 0.1475 | Acc: 0.9643 | F1: 0.9643
+Fold 5 | Iter 119 — Val Loss: 0.1143 | Acc: 0.9643 | F1: 0.9642
+Fold 5 | Iter 126 — Val Loss: 0.1073 | Acc: 0.9762 | F1: 0.9762
+Fold 5 | Iter 133 — Val Loss: 0.1464 | Acc: 0.9643 | F1: 0.9641
+Fold 5 | Iter 140 — Val Loss: 0.0261 | Acc: 0.9940 | F1: 0.9940
+Fold 5 | Iter 147 — Val Loss: 0.0167 | Acc: 0.9881 | F1: 0.9881
+Fold 5 | Iter 154 — Val Loss: 0.0340 | Acc: 0.9881 | F1: 0.9880
+Fold 5 | Iter 161 — Val Loss: 0.1675 | Acc: 0.9702 | F1: 0.9702
+Fold 5 | Iter 168 — Val Loss: 0.1117 | Acc: 0.9762 | F1: 0.9762
+Fold 5 | Iter 175 — Val Loss: 0.0753 | Acc: 0.9881 | F1: 0.9881
+Fold 5 | Iter 182 — Val Loss: 0.0389 | Acc: 0.9881 | F1: 0.9881
+Fold 5 | Iter 189 — Val Loss: 0.0319 | Acc: 0.9881 | F1: 0.9880
+Fold 5 | Iter 196 — Val Loss: 0.1329 | Acc: 0.9702 | F1: 0.9704
+Fold 5 | Iter 200 — Val Loss: 0.2225 | Acc: 0.9583 | F1: 0.9588
+
+CV Summary:
+  Fold 1: Loss=0.1314, Acc=0.9527
+  Fold 2: Loss=0.1513, Acc=0.9583
+  Fold 3: Loss=0.0042, Acc=1.0000
+  Fold 4: Loss=0.1414, Acc=0.9643
+  Fold 5: Loss=0.2225, Acc=0.9583
+  Mean   : Loss=0.1302±0.0707, Acc=0.9667±0.0170
+
+Retraining on full dataset (no validation split)...
+
+Final model trained on all data | Loss: 0.0383 | Acc: 0.9881
+Saved final model to offline_gesture_simplecnn.pth
+Training & evaluation complete.
+
+[CNN BiLSTM]
+PS C:\Capstone\arm-pose-estimation-main> & C:/Users/bluei/AppData/Local/Programs/Python/Python312/python.exe c:/Capstone/arm-pose-estimation-main/src/wear_mocap_ape/classification/train_gesture_offline.py --csv 6DMG_VXO.csv --model cnnbilstm
+Training & evaluation start.
+Label distribution across dataset:
+  Label 0: 280
+  Label 1: 280
+  Label 2: 281
+C:\Users\bluei\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\conv.py:306: UserWarning: Plan failed with a cudnnException: CUDNN_BACKEND_EXECUTION_PLAN_DESCRIPTOR: cudnnFinalize Descriptor Failed cudnn_status: CUDNN_STATUS_NOT_SUPPORTED (Triggered internally at ..\aten\src\ATen\native\cudnn\Conv_v8.cpp:919.)
+  return F.conv1d(input, weight, bias, self.stride,
+Fold 1 | Iter 7 — Val Loss: 0.6464 | Acc: 0.7337 | F1: 0.7127
+Fold 1 | Iter 14 — Val Loss: 0.4046 | Acc: 0.8580 | F1: 0.8585
+Fold 1 | Iter 21 — Val Loss: 0.4146 | Acc: 0.8994 | F1: 0.8995
+Fold 1 | Iter 28 — Val Loss: 0.2174 | Acc: 0.9290 | F1: 0.9294
+Fold 1 | Iter 35 — Val Loss: 0.1662 | Acc: 0.9408 | F1: 0.9410
+Fold 1 | Iter 42 — Val Loss: 0.1537 | Acc: 0.9467 | F1: 0.9469
+Fold 1 | Iter 49 — Val Loss: 0.1517 | Acc: 0.9467 | F1: 0.9467
+Fold 1 | Iter 56 — Val Loss: 0.1852 | Acc: 0.9586 | F1: 0.9582
+Fold 1 | Iter 63 — Val Loss: 0.1646 | Acc: 0.9467 | F1: 0.9468
+Fold 1 | Iter 70 — Val Loss: 0.2165 | Acc: 0.9290 | F1: 0.9293
+Fold 1 | Iter 77 — Val Loss: 0.2468 | Acc: 0.9231 | F1: 0.9216
+Fold 1 | Iter 84 — Val Loss: 0.1586 | Acc: 0.9408 | F1: 0.9410
+Fold 1 | Iter 91 — Val Loss: 0.1263 | Acc: 0.9645 | F1: 0.9642
+Fold 1 | Iter 98 — Val Loss: 0.1075 | Acc: 0.9645 | F1: 0.9644
+Fold 1 | Iter 105 — Val Loss: 0.1334 | Acc: 0.9704 | F1: 0.9702
+Fold 1 | Iter 112 — Val Loss: 0.0884 | Acc: 0.9704 | F1: 0.9704
+Fold 1 | Iter 119 — Val Loss: 0.1119 | Acc: 0.9704 | F1: 0.9702
+Fold 1 | Iter 126 — Val Loss: 0.0647 | Acc: 0.9704 | F1: 0.9701
+Fold 1 | Iter 133 — Val Loss: 0.0401 | Acc: 0.9822 | F1: 0.9821
+Fold 1 | Iter 140 — Val Loss: 0.0315 | Acc: 0.9822 | F1: 0.9821
+Fold 1 | Iter 147 — Val Loss: 0.0597 | Acc: 0.9763 | F1: 0.9762
+Fold 1 | Iter 154 — Val Loss: 0.0672 | Acc: 0.9763 | F1: 0.9762
+Fold 1 | Iter 161 — Val Loss: 0.0326 | Acc: 0.9882 | F1: 0.9881
+Fold 1 | Iter 168 — Val Loss: 0.0252 | Acc: 0.9882 | F1: 0.9881
+Fold 1 | Iter 175 — Val Loss: 0.0331 | Acc: 0.9822 | F1: 0.9821
+Fold 1 | Iter 182 — Val Loss: 0.0308 | Acc: 0.9882 | F1: 0.9881
+Fold 1 | Iter 189 — Val Loss: 0.0306 | Acc: 0.9882 | F1: 0.9881
+Fold 1 | Iter 196 — Val Loss: 0.0340 | Acc: 0.9822 | F1: 0.9821
+Fold 1 | Iter 200 — Val Loss: 0.0351 | Acc: 0.9822 | F1: 0.9821
+C:\Users\bluei\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\conv.py:306: UserWarning: Plan failed with a cudnnException: CUDNN_BACKEND_EXECUTION_PLAN_DESCRIPTOR: cudnnFinalize Descriptor Failed cudnn_status: CUDNN_STATUS_NOT_SUPPORTED (Triggered internally at ..\aten\src\ATen\native\cudnn\Conv_v8.cpp:919.)
+  return F.conv1d(input, weight, bias, self.stride,
+Fold 2 | Iter 7 — Val Loss: 0.7008 | Acc: 0.6786 | F1: 0.6467
+Fold 2 | Iter 14 — Val Loss: 0.5067 | Acc: 0.8036 | F1: 0.8031
+Fold 2 | Iter 21 — Val Loss: 0.2833 | Acc: 0.8810 | F1: 0.8817
+Fold 2 | Iter 28 — Val Loss: 0.1644 | Acc: 0.9464 | F1: 0.9469
+Fold 2 | Iter 35 — Val Loss: 0.1072 | Acc: 0.9643 | F1: 0.9643
+Fold 2 | Iter 42 — Val Loss: 0.0982 | Acc: 0.9762 | F1: 0.9761
+Fold 2 | Iter 49 — Val Loss: 0.0789 | Acc: 0.9762 | F1: 0.9762
+Fold 2 | Iter 56 — Val Loss: 0.1989 | Acc: 0.9345 | F1: 0.9342
+Fold 2 | Iter 63 — Val Loss: 0.0793 | Acc: 0.9762 | F1: 0.9761
+Fold 2 | Iter 70 — Val Loss: 0.0692 | Acc: 0.9821 | F1: 0.9822
+Fold 2 | Iter 77 — Val Loss: 0.1055 | Acc: 0.9643 | F1: 0.9642
+Fold 2 | Iter 84 — Val Loss: 0.1334 | Acc: 0.9643 | F1: 0.9639
+Fold 2 | Iter 91 — Val Loss: 0.1364 | Acc: 0.9643 | F1: 0.9644
+Fold 2 | Iter 98 — Val Loss: 0.0884 | Acc: 0.9821 | F1: 0.9821
+Fold 2 | Iter 105 — Val Loss: 0.1222 | Acc: 0.9583 | F1: 0.9577
+Fold 2 | Iter 112 — Val Loss: 0.1117 | Acc: 0.9643 | F1: 0.9644
+Fold 2 | Iter 119 — Val Loss: 0.0921 | Acc: 0.9821 | F1: 0.9821
+Fold 2 | Iter 126 — Val Loss: 0.0902 | Acc: 0.9762 | F1: 0.9762
+Fold 2 | Iter 133 — Val Loss: 0.0658 | Acc: 0.9702 | F1: 0.9703
+Fold 2 | Iter 140 — Val Loss: 0.0874 | Acc: 0.9464 | F1: 0.9465
+Fold 2 | Iter 147 — Val Loss: 0.1510 | Acc: 0.9524 | F1: 0.9522
+Fold 2 | Iter 154 — Val Loss: 0.0959 | Acc: 0.9643 | F1: 0.9644
+Fold 2 | Iter 161 — Val Loss: 0.0844 | Acc: 0.9762 | F1: 0.9761
+Fold 2 | Iter 168 — Val Loss: 0.0336 | Acc: 0.9821 | F1: 0.9821
+Fold 2 | Iter 175 — Val Loss: 0.0532 | Acc: 0.9821 | F1: 0.9821
+Fold 2 | Iter 182 — Val Loss: 0.0495 | Acc: 0.9881 | F1: 0.9880
+Fold 2 | Iter 189 — Val Loss: 0.0523 | Acc: 0.9881 | F1: 0.9880
+Fold 2 | Iter 196 — Val Loss: 0.0413 | Acc: 0.9881 | F1: 0.9880
+Fold 2 | Iter 200 — Val Loss: 0.0406 | Acc: 0.9881 | F1: 0.9880
+Fold 3 | Iter 7 — Val Loss: 0.7069 | Acc: 0.8036 | F1: 0.8045
+Fold 3 | Iter 14 — Val Loss: 0.2874 | Acc: 0.8988 | F1: 0.8993
+Fold 3 | Iter 21 — Val Loss: 0.2403 | Acc: 0.9226 | F1: 0.9232
+Fold 3 | Iter 28 — Val Loss: 0.2355 | Acc: 0.9167 | F1: 0.9167
+Fold 3 | Iter 35 — Val Loss: 0.2225 | Acc: 0.9107 | F1: 0.9106
+Fold 3 | Iter 42 — Val Loss: 0.2113 | Acc: 0.9345 | F1: 0.9348
+Fold 3 | Iter 49 — Val Loss: 0.1578 | Acc: 0.9524 | F1: 0.9524
+Fold 3 | Iter 56 — Val Loss: 0.1409 | Acc: 0.9345 | F1: 0.9347
+Fold 3 | Iter 63 — Val Loss: 0.1475 | Acc: 0.9524 | F1: 0.9526
+Fold 3 | Iter 70 — Val Loss: 0.1233 | Acc: 0.9524 | F1: 0.9523
+Fold 3 | Iter 77 — Val Loss: 0.1062 | Acc: 0.9702 | F1: 0.9704
+Fold 3 | Iter 84 — Val Loss: 0.0511 | Acc: 0.9821 | F1: 0.9821
+Fold 3 | Iter 91 — Val Loss: 0.0760 | Acc: 0.9881 | F1: 0.9881
+Fold 3 | Iter 98 — Val Loss: 0.1011 | Acc: 0.9702 | F1: 0.9702
+Fold 3 | Iter 105 — Val Loss: 0.1154 | Acc: 0.9643 | F1: 0.9645
+Fold 3 | Iter 112 — Val Loss: 0.0753 | Acc: 0.9881 | F1: 0.9881
+Fold 3 | Iter 119 — Val Loss: 0.1068 | Acc: 0.9643 | F1: 0.9642
+Fold 3 | Iter 126 — Val Loss: 0.1092 | Acc: 0.9583 | F1: 0.9583
+Fold 3 | Iter 133 — Val Loss: 0.1525 | Acc: 0.9524 | F1: 0.9523
+Fold 3 | Iter 140 — Val Loss: 0.0449 | Acc: 0.9821 | F1: 0.9822
+Fold 3 | Iter 147 — Val Loss: 0.1345 | Acc: 0.9762 | F1: 0.9761
+Fold 3 | Iter 154 — Val Loss: 0.0955 | Acc: 0.9762 | F1: 0.9761
+Fold 3 | Iter 161 — Val Loss: 0.0543 | Acc: 0.9762 | F1: 0.9761
+Fold 3 | Iter 168 — Val Loss: 0.0350 | Acc: 0.9821 | F1: 0.9821
+Fold 3 | Iter 175 — Val Loss: 0.0610 | Acc: 0.9881 | F1: 0.9881
+Fold 3 | Iter 182 — Val Loss: 0.0763 | Acc: 0.9821 | F1: 0.9821
+Fold 3 | Iter 189 — Val Loss: 0.0597 | Acc: 0.9821 | F1: 0.9821
+Fold 3 | Iter 196 — Val Loss: 0.0857 | Acc: 0.9762 | F1: 0.9762
+Fold 3 | Iter 200 — Val Loss: 0.0820 | Acc: 0.9762 | F1: 0.9762
+Fold 4 | Iter 7 — Val Loss: 0.6465 | Acc: 0.7143 | F1: 0.7026
+Fold 4 | Iter 14 — Val Loss: 0.4790 | Acc: 0.8452 | F1: 0.8440
+Fold 4 | Iter 21 — Val Loss: 0.2351 | Acc: 0.9226 | F1: 0.9223
+Fold 4 | Iter 28 — Val Loss: 0.2482 | Acc: 0.9107 | F1: 0.9094
+Fold 4 | Iter 35 — Val Loss: 0.1240 | Acc: 0.9583 | F1: 0.9582
+Fold 4 | Iter 42 — Val Loss: 0.0802 | Acc: 0.9702 | F1: 0.9703
+Fold 4 | Iter 49 — Val Loss: 0.0847 | Acc: 0.9643 | F1: 0.9645
+Fold 4 | Iter 56 — Val Loss: 0.1187 | Acc: 0.9583 | F1: 0.9580
+Fold 4 | Iter 63 — Val Loss: 0.0921 | Acc: 0.9821 | F1: 0.9822
+Fold 4 | Iter 70 — Val Loss: 0.0648 | Acc: 0.9702 | F1: 0.9701
+Fold 4 | Iter 77 — Val Loss: 0.0763 | Acc: 0.9821 | F1: 0.9822
+Fold 4 | Iter 84 — Val Loss: 0.1260 | Acc: 0.9643 | F1: 0.9641
+Fold 4 | Iter 91 — Val Loss: 0.0975 | Acc: 0.9762 | F1: 0.9762
+Fold 4 | Iter 98 — Val Loss: 0.0699 | Acc: 0.9762 | F1: 0.9760
+Fold 4 | Iter 105 — Val Loss: 0.2506 | Acc: 0.9048 | F1: 0.9062
+Fold 4 | Iter 112 — Val Loss: 0.1583 | Acc: 0.9464 | F1: 0.9462
+Fold 4 | Iter 119 — Val Loss: 0.1369 | Acc: 0.9583 | F1: 0.9583
+Fold 4 | Iter 126 — Val Loss: 0.1114 | Acc: 0.9464 | F1: 0.9462
+Fold 4 | Iter 133 — Val Loss: 0.0930 | Acc: 0.9702 | F1: 0.9701
+Fold 4 | Iter 140 — Val Loss: 0.1338 | Acc: 0.9583 | F1: 0.9582
+Fold 4 | Iter 147 — Val Loss: 0.1374 | Acc: 0.9702 | F1: 0.9702
+Fold 4 | Iter 154 — Val Loss: 0.0695 | Acc: 0.9762 | F1: 0.9762
+Fold 4 | Iter 161 — Val Loss: 0.0919 | Acc: 0.9702 | F1: 0.9702
+Fold 4 | Iter 168 — Val Loss: 0.1002 | Acc: 0.9643 | F1: 0.9643
+Fold 4 | Iter 175 — Val Loss: 0.1017 | Acc: 0.9583 | F1: 0.9583
+Fold 4 | Iter 182 — Val Loss: 0.1152 | Acc: 0.9643 | F1: 0.9644
+Fold 4 | Iter 189 — Val Loss: 0.0756 | Acc: 0.9762 | F1: 0.9762
+Fold 4 | Iter 196 — Val Loss: 0.0861 | Acc: 0.9762 | F1: 0.9762
+Fold 4 | Iter 200 — Val Loss: 0.1520 | Acc: 0.9405 | F1: 0.9414
+Fold 5 | Iter 7 — Val Loss: 1.3818 | Acc: 0.3333 | F1: 0.1667
+Fold 5 | Iter 14 — Val Loss: 0.5849 | Acc: 0.8274 | F1: 0.8260
+Fold 5 | Iter 21 — Val Loss: 0.3832 | Acc: 0.8452 | F1: 0.8447
+Fold 5 | Iter 28 — Val Loss: 0.1771 | Acc: 0.9583 | F1: 0.9583
+Fold 5 | Iter 35 — Val Loss: 0.3788 | Acc: 0.8452 | F1: 0.8445
+Fold 5 | Iter 42 — Val Loss: 0.5668 | Acc: 0.7917 | F1: 0.7954
+Fold 5 | Iter 49 — Val Loss: 0.3949 | Acc: 0.8571 | F1: 0.8545
+Fold 5 | Iter 56 — Val Loss: 0.4619 | Acc: 0.8274 | F1: 0.8139
+Fold 5 | Iter 63 — Val Loss: 0.2041 | Acc: 0.9226 | F1: 0.9216
+Fold 5 | Iter 70 — Val Loss: 0.1778 | Acc: 0.9464 | F1: 0.9464
+Fold 5 | Iter 77 — Val Loss: 0.1331 | Acc: 0.9583 | F1: 0.9582
+Fold 5 | Iter 84 — Val Loss: 0.0744 | Acc: 0.9762 | F1: 0.9760
+Fold 5 | Iter 91 — Val Loss: 0.0342 | Acc: 0.9940 | F1: 0.9940
+Fold 5 | Iter 98 — Val Loss: 0.0365 | Acc: 0.9940 | F1: 0.9940
+Fold 5 | Iter 105 — Val Loss: 0.0436 | Acc: 0.9821 | F1: 0.9821
+Fold 5 | Iter 112 — Val Loss: 0.0610 | Acc: 0.9821 | F1: 0.9822
+Fold 5 | Iter 119 — Val Loss: 0.0413 | Acc: 0.9821 | F1: 0.9821
+Fold 5 | Iter 126 — Val Loss: 0.0736 | Acc: 0.9702 | F1: 0.9701
+Fold 5 | Iter 133 — Val Loss: 0.0803 | Acc: 0.9702 | F1: 0.9703
+Fold 5 | Iter 140 — Val Loss: 0.0555 | Acc: 0.9821 | F1: 0.9821
+Fold 5 | Iter 147 — Val Loss: 0.0555 | Acc: 0.9821 | F1: 0.9822
+Fold 5 | Iter 154 — Val Loss: 0.0552 | Acc: 0.9940 | F1: 0.9940
+Fold 5 | Iter 161 — Val Loss: 0.0500 | Acc: 0.9881 | F1: 0.9881
+Fold 5 | Iter 168 — Val Loss: 0.0568 | Acc: 0.9881 | F1: 0.9881
+Fold 5 | Iter 175 — Val Loss: 0.0431 | Acc: 0.9881 | F1: 0.9881
+Fold 5 | Iter 182 — Val Loss: 0.0344 | Acc: 0.9881 | F1: 0.9881
+Fold 5 | Iter 189 — Val Loss: 0.0458 | Acc: 0.9940 | F1: 0.9940
+Fold 5 | Iter 196 — Val Loss: 0.0510 | Acc: 0.9940 | F1: 0.9940
+Fold 5 | Iter 200 — Val Loss: 0.0505 | Acc: 0.9940 | F1: 0.9940
+
+CV Summary:
+  Fold 1: Loss=0.0351, Acc=0.9822
+  Fold 2: Loss=0.0406, Acc=0.9881
+  Fold 3: Loss=0.0820, Acc=0.9762
+  Fold 4: Loss=0.1520, Acc=0.9405
+  Fold 5: Loss=0.0505, Acc=0.9940
+  Mean   : Loss=0.0720±0.0431, Acc=0.9762±0.0188
+
+Retraining on full dataset (no validation split)...
+
+Final model trained on all data | Loss: 0.0118 | Acc: 0.9964
+Saved final model to offline_gesture_cnnbilstm.pth
+Training & evaluation complete.
+
+[small TCN]
+PS C:\Capstone\arm-pose-estimation-main> & C:/Users/bluei/AppData/Local/Programs/Python/Python312/python.exe c:/Capstone/arm-pose-estimation-main/src/wear_mocap_ape/classification/train_gesture_offline.py --csv 6DMG_VXO.csv --model smalltcn 
+Training & evaluation start.
+Label distribution across dataset:
+  Label 0: 280
+  Label 1: 280
+  Label 2: 281
+C:\Users\bluei\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\conv.py:306: UserWarning: Plan failed with a cudnnException: CUDNN_BACKEND_EXECUTION_PLAN_DESCRIPTOR: cudnnFinalize Descriptor Failed cudnn_status: CUDNN_STATUS_NOT_SUPPORTED (Triggered internally at ..\aten\src\ATen\native\cudnn\Conv_v8.cpp:919.)
+  return F.conv1d(input, weight, bias, self.stride,
+Fold 1 | Iter 7 — Val Loss: 0.3827 | Acc: 0.9231 | F1: 0.9229
+Fold 1 | Iter 14 — Val Loss: 1.5305 | Acc: 0.6805 | F1: 0.5717
+Fold 1 | Iter 21 — Val Loss: 0.2625 | Acc: 0.9112 | F1: 0.9111
+Fold 1 | Iter 28 — Val Loss: 0.4138 | Acc: 0.8817 | F1: 0.8771
+Fold 1 | Iter 35 — Val Loss: 0.1571 | Acc: 0.9349 | F1: 0.9352
+Fold 1 | Iter 42 — Val Loss: 0.0932 | Acc: 0.9763 | F1: 0.9762
+Fold 1 | Iter 49 — Val Loss: 0.0677 | Acc: 0.9822 | F1: 0.9821
+Fold 1 | Iter 56 — Val Loss: 0.0553 | Acc: 0.9822 | F1: 0.9821
+Fold 1 | Iter 63 — Val Loss: 0.0602 | Acc: 0.9822 | F1: 0.9821
+Fold 1 | Iter 70 — Val Loss: 0.0265 | Acc: 0.9941 | F1: 0.9940
+Fold 1 | Iter 77 — Val Loss: 0.0192 | Acc: 0.9941 | F1: 0.9940
+Fold 1 | Iter 84 — Val Loss: 0.0210 | Acc: 0.9941 | F1: 0.9940
+Fold 1 | Iter 91 — Val Loss: 0.0313 | Acc: 0.9882 | F1: 0.9881
+Fold 1 | Iter 98 — Val Loss: 0.0472 | Acc: 0.9882 | F1: 0.9881
+Fold 1 | Iter 105 — Val Loss: 0.0507 | Acc: 0.9763 | F1: 0.9763
+Fold 1 | Iter 112 — Val Loss: 0.0515 | Acc: 0.9763 | F1: 0.9763
+Fold 1 | Iter 119 — Val Loss: 0.0075 | Acc: 1.0000 | F1: 1.0000
+Fold 1 | Iter 126 — Val Loss: 0.1056 | Acc: 0.9763 | F1: 0.9764
+Fold 1 | Iter 133 — Val Loss: 0.0181 | Acc: 0.9941 | F1: 0.9940
+Fold 1 | Iter 140 — Val Loss: 0.1853 | Acc: 0.9527 | F1: 0.9519
+Fold 1 | Iter 147 — Val Loss: 0.3479 | Acc: 0.8994 | F1: 0.9002
+Fold 1 | Iter 154 — Val Loss: 0.2166 | Acc: 0.9172 | F1: 0.9140
+Fold 1 | Iter 161 — Val Loss: 0.1459 | Acc: 0.9527 | F1: 0.9523
+Fold 1 | Iter 168 — Val Loss: 0.0535 | Acc: 0.9822 | F1: 0.9822
+Fold 1 | Iter 175 — Val Loss: 0.0641 | Acc: 0.9822 | F1: 0.9821
+Fold 1 | Iter 182 — Val Loss: 0.0198 | Acc: 0.9941 | F1: 0.9941
+Fold 1 | Iter 189 — Val Loss: 0.0713 | Acc: 0.9882 | F1: 0.9882
+Fold 1 | Iter 196 — Val Loss: 0.0079 | Acc: 1.0000 | F1: 1.0000
+Fold 1 | Iter 200 — Val Loss: 0.1016 | Acc: 0.9763 | F1: 0.9764
+C:\Users\bluei\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\conv.py:306: UserWarning: Plan failed with a cudnnException: CUDNN_BACKEND_EXECUTION_PLAN_DESCRIPTOR: cudnnFinalize Descriptor Failed cudnn_status: CUDNN_STATUS_NOT_SUPPORTED (Triggered internally at ..\aten\src\ATen\native\cudnn\Conv_v8.cpp:919.)
+  return F.conv1d(input, weight, bias, self.stride,
+Fold 2 | Iter 7 — Val Loss: 2.7644 | Acc: 0.5298 | F1: 0.4368
+Fold 2 | Iter 14 — Val Loss: 1.2777 | Acc: 0.6845 | F1: 0.6760
+Fold 2 | Iter 21 — Val Loss: 0.4001 | Acc: 0.8929 | F1: 0.8870
+Fold 2 | Iter 28 — Val Loss: 0.2696 | Acc: 0.9167 | F1: 0.9185
+Fold 2 | Iter 35 — Val Loss: 0.7638 | Acc: 0.7440 | F1: 0.7405
+Fold 2 | Iter 42 — Val Loss: 0.5888 | Acc: 0.8095 | F1: 0.8094
+Fold 2 | Iter 49 — Val Loss: 0.0995 | Acc: 0.9524 | F1: 0.9530
+Fold 2 | Iter 56 — Val Loss: 0.0736 | Acc: 0.9583 | F1: 0.9588
+Fold 2 | Iter 63 — Val Loss: 0.0489 | Acc: 0.9881 | F1: 0.9881
+Fold 2 | Iter 70 — Val Loss: 0.0322 | Acc: 0.9881 | F1: 0.9881
+Fold 2 | Iter 77 — Val Loss: 0.0084 | Acc: 1.0000 | F1: 1.0000
+Fold 2 | Iter 84 — Val Loss: 0.0139 | Acc: 1.0000 | F1: 1.0000
+Fold 2 | Iter 91 — Val Loss: 0.0263 | Acc: 0.9940 | F1: 0.9940
+Fold 2 | Iter 98 — Val Loss: 0.0131 | Acc: 1.0000 | F1: 1.0000
+Fold 2 | Iter 105 — Val Loss: 0.0067 | Acc: 1.0000 | F1: 1.0000
+Fold 2 | Iter 112 — Val Loss: 0.1621 | Acc: 0.9583 | F1: 0.9576
+Fold 2 | Iter 119 — Val Loss: 0.0531 | Acc: 0.9762 | F1: 0.9762
+Fold 2 | Iter 126 — Val Loss: 0.0274 | Acc: 0.9881 | F1: 0.9881
+Fold 2 | Iter 133 — Val Loss: 0.2024 | Acc: 0.9345 | F1: 0.9357
+Fold 2 | Iter 140 — Val Loss: 0.0510 | Acc: 0.9821 | F1: 0.9821
+Fold 2 | Iter 147 — Val Loss: 0.0607 | Acc: 0.9821 | F1: 0.9821
+Fold 2 | Iter 154 — Val Loss: 0.0084 | Acc: 1.0000 | F1: 1.0000
+Fold 2 | Iter 161 — Val Loss: 0.0749 | Acc: 0.9762 | F1: 0.9762
+Fold 2 | Iter 168 — Val Loss: 0.1159 | Acc: 0.9583 | F1: 0.9582
+Fold 2 | Iter 175 — Val Loss: 0.0592 | Acc: 0.9702 | F1: 0.9699
+Fold 2 | Iter 182 — Val Loss: 0.0098 | Acc: 1.0000 | F1: 1.0000
+Fold 2 | Iter 189 — Val Loss: 0.0051 | Acc: 1.0000 | F1: 1.0000
+Fold 2 | Iter 196 — Val Loss: 0.0063 | Acc: 0.9940 | F1: 0.9940
+Fold 2 | Iter 200 — Val Loss: 0.0061 | Acc: 0.9940 | F1: 0.9940
+Fold 3 | Iter 7 — Val Loss: 0.9393 | Acc: 0.6726 | F1: 0.6181
+Fold 3 | Iter 14 — Val Loss: 0.5470 | Acc: 0.7798 | F1: 0.7599
+Fold 3 | Iter 21 — Val Loss: 0.5087 | Acc: 0.8393 | F1: 0.8232
+Fold 3 | Iter 28 — Val Loss: 0.4539 | Acc: 0.8274 | F1: 0.8092
+Fold 3 | Iter 35 — Val Loss: 0.2216 | Acc: 0.9107 | F1: 0.9102
+Fold 3 | Iter 42 — Val Loss: 0.0540 | Acc: 0.9821 | F1: 0.9821
+Fold 3 | Iter 49 — Val Loss: 0.0261 | Acc: 0.9940 | F1: 0.9940
+Fold 3 | Iter 56 — Val Loss: 0.0755 | Acc: 0.9762 | F1: 0.9763
+Fold 3 | Iter 63 — Val Loss: 0.0431 | Acc: 0.9881 | F1: 0.9881
+Fold 3 | Iter 70 — Val Loss: 0.0176 | Acc: 0.9940 | F1: 0.9940
+Fold 3 | Iter 77 — Val Loss: 0.0346 | Acc: 0.9881 | F1: 0.9880
+Fold 3 | Iter 84 — Val Loss: 0.0490 | Acc: 0.9881 | F1: 0.9880
+Fold 3 | Iter 91 — Val Loss: 0.0217 | Acc: 0.9881 | F1: 0.9880
+Fold 3 | Iter 98 — Val Loss: 0.0057 | Acc: 1.0000 | F1: 1.0000
+Fold 3 | Iter 105 — Val Loss: 0.0107 | Acc: 0.9940 | F1: 0.9940
+Fold 3 | Iter 112 — Val Loss: 0.0222 | Acc: 0.9940 | F1: 0.9940
+Fold 3 | Iter 119 — Val Loss: 0.0212 | Acc: 0.9940 | F1: 0.9940
+Fold 3 | Iter 126 — Val Loss: 0.0330 | Acc: 0.9881 | F1: 0.9880
+Fold 3 | Iter 133 — Val Loss: 0.0412 | Acc: 0.9881 | F1: 0.9880
+Fold 3 | Iter 140 — Val Loss: 0.0210 | Acc: 0.9881 | F1: 0.9880
+Fold 3 | Iter 147 — Val Loss: 0.0222 | Acc: 0.9940 | F1: 0.9940
+Fold 3 | Iter 154 — Val Loss: 0.0341 | Acc: 0.9940 | F1: 0.9940
+Fold 3 | Iter 161 — Val Loss: 0.0079 | Acc: 1.0000 | F1: 1.0000
+Fold 3 | Iter 168 — Val Loss: 0.0057 | Acc: 1.0000 | F1: 1.0000
+Fold 3 | Iter 175 — Val Loss: 0.0091 | Acc: 0.9940 | F1: 0.9940
+Fold 3 | Iter 182 — Val Loss: 0.0201 | Acc: 0.9940 | F1: 0.9940
+Fold 3 | Iter 189 — Val Loss: 0.0249 | Acc: 0.9940 | F1: 0.9940
+Fold 3 | Iter 196 — Val Loss: 0.0344 | Acc: 0.9881 | F1: 0.9881
+Fold 3 | Iter 200 — Val Loss: 0.0237 | Acc: 0.9881 | F1: 0.9881
+Fold 4 | Iter 7 — Val Loss: 1.0720 | Acc: 0.7619 | F1: 0.7494
+Fold 4 | Iter 14 — Val Loss: 2.4868 | Acc: 0.6250 | F1: 0.5341
+Fold 4 | Iter 21 — Val Loss: 0.5287 | Acc: 0.8214 | F1: 0.8190
+Fold 4 | Iter 28 — Val Loss: 0.1547 | Acc: 0.9286 | F1: 0.9283
+Fold 4 | Iter 35 — Val Loss: 0.0563 | Acc: 0.9881 | F1: 0.9881
+Fold 4 | Iter 42 — Val Loss: 0.0347 | Acc: 0.9821 | F1: 0.9820
+Fold 4 | Iter 49 — Val Loss: 0.0313 | Acc: 0.9821 | F1: 0.9821
+Fold 4 | Iter 56 — Val Loss: 0.0306 | Acc: 0.9940 | F1: 0.9940
+Fold 4 | Iter 63 — Val Loss: 0.0301 | Acc: 0.9881 | F1: 0.9881
+Fold 4 | Iter 70 — Val Loss: 0.0258 | Acc: 0.9821 | F1: 0.9821
+Fold 4 | Iter 77 — Val Loss: 0.0082 | Acc: 1.0000 | F1: 1.0000
+Fold 4 | Iter 84 — Val Loss: 0.0197 | Acc: 0.9940 | F1: 0.9940
+Fold 4 | Iter 91 — Val Loss: 0.0137 | Acc: 0.9940 | F1: 0.9940
+Fold 4 | Iter 98 — Val Loss: 0.0311 | Acc: 0.9821 | F1: 0.9821
+Fold 4 | Iter 105 — Val Loss: 0.0340 | Acc: 0.9821 | F1: 0.9822
+Fold 4 | Iter 112 — Val Loss: 0.0086 | Acc: 0.9940 | F1: 0.9940
+Fold 4 | Iter 119 — Val Loss: 0.0164 | Acc: 0.9940 | F1: 0.9940
+Fold 4 | Iter 126 — Val Loss: 0.0023 | Acc: 1.0000 | F1: 1.0000
+Fold 4 | Iter 133 — Val Loss: 0.0102 | Acc: 0.9940 | F1: 0.9940
+Fold 4 | Iter 140 — Val Loss: 0.0091 | Acc: 1.0000 | F1: 1.0000
+Fold 4 | Iter 147 — Val Loss: 0.0018 | Acc: 1.0000 | F1: 1.0000
+Fold 4 | Iter 154 — Val Loss: 0.0014 | Acc: 1.0000 | F1: 1.0000
+Fold 4 | Iter 161 — Val Loss: 0.0021 | Acc: 1.0000 | F1: 1.0000
+Fold 4 | Iter 168 — Val Loss: 0.0023 | Acc: 1.0000 | F1: 1.0000
+Fold 4 | Iter 175 — Val Loss: 0.0025 | Acc: 1.0000 | F1: 1.0000
+Fold 4 | Iter 182 — Val Loss: 0.0019 | Acc: 1.0000 | F1: 1.0000
+Fold 4 | Iter 189 — Val Loss: 0.0014 | Acc: 1.0000 | F1: 1.0000
+Fold 4 | Iter 196 — Val Loss: 0.0012 | Acc: 1.0000 | F1: 1.0000
+Fold 4 | Iter 200 — Val Loss: 0.0018 | Acc: 1.0000 | F1: 1.0000
+Fold 5 | Iter 7 — Val Loss: 2.7743 | Acc: 0.5357 | F1: 0.4320
+Fold 5 | Iter 14 — Val Loss: 0.6651 | Acc: 0.8274 | F1: 0.8249
+Fold 5 | Iter 21 — Val Loss: 0.4432 | Acc: 0.8214 | F1: 0.8090
+Fold 5 | Iter 28 — Val Loss: 0.5411 | Acc: 0.8333 | F1: 0.8374
+Fold 5 | Iter 35 — Val Loss: 0.1955 | Acc: 0.9345 | F1: 0.9339
+Fold 5 | Iter 42 — Val Loss: 0.1267 | Acc: 0.9524 | F1: 0.9516
+Fold 5 | Iter 49 — Val Loss: 0.1080 | Acc: 0.9702 | F1: 0.9703
+Fold 5 | Iter 56 — Val Loss: 0.0362 | Acc: 0.9940 | F1: 0.9940
+Fold 5 | Iter 63 — Val Loss: 0.0321 | Acc: 0.9821 | F1: 0.9822
+Fold 5 | Iter 70 — Val Loss: 0.0848 | Acc: 0.9762 | F1: 0.9762
+Fold 5 | Iter 77 — Val Loss: 0.0900 | Acc: 0.9405 | F1: 0.9406
+Fold 5 | Iter 84 — Val Loss: 0.0387 | Acc: 0.9881 | F1: 0.9880
+Fold 5 | Iter 91 — Val Loss: 0.0451 | Acc: 0.9821 | F1: 0.9820
+Fold 5 | Iter 98 — Val Loss: 0.0491 | Acc: 0.9821 | F1: 0.9821
+Fold 5 | Iter 105 — Val Loss: 0.0293 | Acc: 0.9821 | F1: 0.9821
+Fold 5 | Iter 112 — Val Loss: 0.0269 | Acc: 0.9821 | F1: 0.9821
+Fold 5 | Iter 119 — Val Loss: 0.0274 | Acc: 0.9881 | F1: 0.9881
+Fold 5 | Iter 126 — Val Loss: 0.0304 | Acc: 0.9821 | F1: 0.9820
+Fold 5 | Iter 133 — Val Loss: 0.0154 | Acc: 0.9940 | F1: 0.9940
+Fold 5 | Iter 140 — Val Loss: 0.0082 | Acc: 1.0000 | F1: 1.0000
+Fold 5 | Iter 147 — Val Loss: 0.0197 | Acc: 0.9940 | F1: 0.9940
+Fold 5 | Iter 154 — Val Loss: 0.0109 | Acc: 1.0000 | F1: 1.0000
+Fold 5 | Iter 161 — Val Loss: 0.0094 | Acc: 0.9940 | F1: 0.9940
+Fold 5 | Iter 168 — Val Loss: 0.0105 | Acc: 0.9940 | F1: 0.9940
+Fold 5 | Iter 175 — Val Loss: 0.0084 | Acc: 0.9940 | F1: 0.9940
+Fold 5 | Iter 182 — Val Loss: 0.0073 | Acc: 0.9940 | F1: 0.9940
+Fold 5 | Iter 189 — Val Loss: 0.0082 | Acc: 0.9940 | F1: 0.9940
+Fold 5 | Iter 196 — Val Loss: 0.0082 | Acc: 0.9940 | F1: 0.9940
+Fold 5 | Iter 200 — Val Loss: 0.0077 | Acc: 0.9940 | F1: 0.9940
+
+CV Summary:
+  Fold 1: Loss=0.1016, Acc=0.9763
+  Fold 2: Loss=0.0061, Acc=0.9940
+  Fold 3: Loss=0.0237, Acc=0.9881
+  Fold 4: Loss=0.0018, Acc=1.0000
+  Fold 5: Loss=0.0077, Acc=0.9940
+  Mean   : Loss=0.0282±0.0374, Acc=0.9905±0.0080
+
+Retraining on full dataset (no validation split)...
+
+Final model trained on all data | Loss: 0.0018 | Acc: 1.0000
+Saved final model to offline_gesture_smalltcn.pth
+Training & evaluation complete.
