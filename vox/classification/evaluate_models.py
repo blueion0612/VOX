@@ -16,10 +16,8 @@ from sklearn.metrics import classification_report, confusion_matrix, accuracy_sc
 import math
 from scipy.signal import butter, filtfilt, resample_poly
 
-# thop 라이브러리가 필요합니다. 설치: pip install thop
 from thop import profile
 
-# 5개 모델 클래스를 모두 import합니다.
 from classifier import BiLSTMClassifier, GRUClassifier, SimpleCNNClassifier, CNNBiLSTMClassifier, SmallTCNClassifier
 
 # =============================================================================
@@ -50,7 +48,6 @@ def lowpass_filter(data, fs, cutoff=5.0, order=4):
     return filtfilt(b, a, data, axis=0)
 # =============================================================================
 # 2. Online Dataset Definition
-# [수정] fine_tune_online.py와 완벽하게 동일한 전처리 로직으로 교체
 # =============================================================================
 class OnlineGestureDataset(Dataset):
     LABEL_MAP = {12:0,13:1,14:2,15:2,16:2,17:2}
@@ -79,13 +76,11 @@ class OnlineGestureDataset(Dataset):
             gyro = np.vstack([w_yaw, w_pitch, w_roll]).T
             data = np.hstack([acc, gyro])
 
-            # --- 올바른 전처리 순서 적용 ---
+
             res = resample_window(data, orig_fs, self.fs, self.window)
-            acc_hp = remove_gravity(res[:,:3], self.fs) # 1. 중력 제거 (HPF)
+            acc_hp = remove_gravity(res[:,:3], self.fs) 
             feat = np.hstack([acc_hp, res[:,3:]])
-        
-            
-            # [수정] 스케일링 대상을 LPF가 적용된 데이터로 변경
+
             norm = minmax_scale(feat)
 
             L = norm.shape[0]
@@ -104,7 +99,7 @@ class OnlineGestureDataset(Dataset):
     def __getitem__(self, idx): return self.samples[idx]
 
 # =============================================================================
-# 3. 모델 분석 및 평가 함수 (이전과 동일)
+# 3. 모델 분석 및 평가 함수
 # =============================================================================
 def load_model_for_eval(path: str, model_type: str, device: str = 'cpu'):
     if model_type == 'bilstm': model = BiLSTMClassifier(6, 110, 1, 3)
@@ -182,7 +177,7 @@ def analyze_and_evaluate(model_path: str, model_type: str, loader: DataLoader, a
     return results
 
 # =============================================================================
-# 4. 메인 실행 함수 (이전과 동일)
+# 4. 메인 실행 함수
 # =============================================================================
 def main():
     parser = argparse.ArgumentParser(description="Evaluate and compare multiple gesture models.")
@@ -265,7 +260,6 @@ def main():
             res["Max Correct Confidence"]
         ))
     print("="*line_width)
-    # ▲▲▲▲▲ 여기까지 수정 ▲▲▲▲▲
 
 if __name__ == "__main__":
     main()
