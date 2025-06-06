@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.voxlogo {
+  position: absolute;
+  top: 0px;
+  left: 30px;
+  width: 100px;
+  height: auto;
+  z-index: 100;
+}
+
+body img {
+  width: 100%
+}
+
+.agent-container {
+  text-align: center;
+  padding: 40px;
+}
+
+.agent-header {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.agent-image-container {
+  width: 60vw;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.agent-image-container img {
+  width: 100%;
+  height: auto;
+  display: block; 
+  border-radius: 0; 
+  box-shadow: none; 
+}
+
+.agent-image {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.agent-status-text {
+  font-size: 1.8rem;
+  margin-top: 30px;
+  color: #555;
+}

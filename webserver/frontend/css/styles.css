@@ -1,0 +1,157 @@
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.voxlogo {
+  position: absolute;
+  top: 0px;
+  left: 30px;
+  width: 100px;
+  height: auto;
+  z-index: 100;
+}
+
+.title {
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  margin: 40px 0px 80px 0px;
+}
+
+.agents {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 70%;
+}
+
+.agent {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.agent:hover {
+  background-color: #9595a0; 
+  color: white;
+  transform: scale(1.03); 
+}
+
+.agent-link {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+.agent .info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+
+.agent h1 {
+  margin: 10px;
+}
+
+.agent h5 {
+  margin: 0px;
+}
+
+.agent img {
+  width: 50px;
+}
+
+.agent-status {
+  font-weight: bold;
+}
+
+.info-panel {
+  width: 25%;
+  border: 1px solid #ccc;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
+  font-size: 0.9em;
+}
+
+.info-panel pre {
+  white-space: pre-wrap;
+}
+
+.agent img.smallunity {
+  width: 150px;
+}
+
+
+
+
+
+
+
+  .agent-status h1 {
+    transition: color 0.3s;
+  }
+
+  .status-SOS h1 {
+    color: red;
+  }
+
+  .status-Stable h1,
+  .status-Need_Connection h1 {
+    color: black;
+  }
+
+  .status-Need_Support h1 {
+    color: goldenrod;
+  }
+
+  .agent-status h1 {
+    transition: color 0.3s;
+  }
+  .status-SOS h1 {
+    color: red;
+  }
+  .status-Stable h1 {
+    color: rgb(0, 219, 0);
+  }
+  .status-Need_Connection h1 {
+    color: rgba(0, 0, 0, 0.247);
+  }
+  .status-Need_Support h1 {
+    color: rgb(255, 191, 31);
+  }
+  .log {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f7f7f7;
+    font-family: monospace;
+    font-size: 14px;
+    height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    white-space: pre-wrap;
+  }
+  .smallunity-frame {
+    width: 180px;
+    height: 200px;
+    border: none;
+  }
