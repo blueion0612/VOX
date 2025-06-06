@@ -15,30 +15,12 @@ from classifier import BiLSTMClassifier, GRUClassifier, SimpleCNNClassifier, CNN
 from sklearn.model_selection import StratifiedKFold
 from tqdm import tqdm
 from collections import Counter
-from scipy.signal import butter, filtfilt
+from scipy.signal import butter, filtfilt, resample_poly
 from scipy.interpolate import interp1d , Akima1DInterpolator
 
-
 # =============================================================================
 # 1. Preprocessing Utilities (same as online)
 # =============================================================================
-import torch
-import torch.nn as nn
-from torch.nn.utils.rnn import pack_padded_sequence, pad_packed_sequence
-from torch.utils.data import Dataset
-import numpy as np
-import math
-from scipy.signal import butter, filtfilt, resample_poly
-
-# =============================================================================
-# 1. Preprocessing Utilities (same as online)
-# =============================================================================
-def lowpass_filter(data, fs, cutoff=5.0, order=4):
-    nyq = 0.5 * fs
-    b, a = butter(order, cutoff/nyq, btype='low')
-    return filtfilt(b, a, data, axis=0)
-
-
 def butter_highpass(cutoff, fs, order=4):
     nyq = 0.5 * fs
     normal_cutoff = cutoff / nyq

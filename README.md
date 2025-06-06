@@ -9,7 +9,7 @@
 
 
 
-1 폴더 구성 설명
+1. 폴더 구성 설명
 
 1-1. Data 
 1-1-1. Offline 폴더는 공개 데이터세트인 6DMG: ANew6DMotion Gesture Database를 포함하고 있습니다.

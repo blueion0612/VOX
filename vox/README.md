@@ -1,4 +1,4 @@
-# 선행 연구 - Smartwatch, smartPhone의 Application을 위한 ReadMe 입니다.
+# 선행 연구: WearMoCap - Smartwatch, smartPhone의 Application을 위한 ReadMe 입니다.
 
 # Arm Pose Estimaton Module
 
