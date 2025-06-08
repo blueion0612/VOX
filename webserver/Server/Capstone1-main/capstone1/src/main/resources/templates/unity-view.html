@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Unity 요원 모델</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+        }
+
+        .unity-container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        iframe {
+            width: 95%;
+            height: 95%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+<div class="unity-container">
+    <!-- Unity WebGL Player iframe: 전달받은 deviceSerialNumber를 쿼리로 넘김 -->
+    <iframe th:src="@{'/webgl/index.html?deviceSerialNumber=' + ${deviceSerialNumber}}"></iframe>
+</div>
+</body>
+</html>

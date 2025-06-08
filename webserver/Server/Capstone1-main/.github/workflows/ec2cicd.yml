@@ -1,0 +1,48 @@
+name: Deploy to EC2
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Build with Gradle
+        run: |
+          cd capstone1
+          chmod +x gradlew
+          ./gradlew clean build
+
+      - name: Copy jar to EC2
+        uses: appleboy/scp-action@v0.1.3
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ec2-user
+          key: ${{ secrets.EC2_SSH_KEY }}
+          source: "capstone1/build/libs/capstone1-1.0.jar"
+          target: "/home/ec2-user/"
+          overwrite: true
+
+      - name: Kill existing java process and restart manually
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ec2-user
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            # 기존 실행 중인 Java 프로세스 종료
+            PID=$(pgrep -f "capstone1-1.0.jar")
+            if [ -n "$PID" ]; then
+              echo "Killing existing Java process: $PID"
+              kill -9 $PID
+            fi
+            sleep 3
+            # 백그라운드로 새 JAR 실행
+            echo "Starting new application..."
+            nohup java -Djava.net.preferIPv4Stack=true -jar /home/ec2-user/capstone1-1.0.jar > /home/ec2-user/app.log 2>&1 &
+            echo "Application restarted in background."

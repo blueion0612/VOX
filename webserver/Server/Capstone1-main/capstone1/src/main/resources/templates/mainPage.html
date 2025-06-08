@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vox</title>
+<!--    <link rel="stylesheet" href="/css/styles.css"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <style>
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+        }
+        .header img {
+            height: 90px;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+        .header a {
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: bold;
+            color: black;
+        }
+        .main-content {
+            text-align: center;
+            margin-top: 100px;
+        }
+        .main-content h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+        .main-content p {
+            font-size: 18px;
+            color: #555;
+        }
+        .logo-container {
+            display: block;
+            text-align: left; /* 왼쪽 정렬 */
+            padding: 20px;    /* 여백 */
+        }
+        .voxlogo {
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <a href="/" class="logo-container">
+        <img src="https://i.ibb.co/YBDLXjzs/vox.jpg" alt="voxlogo" class="voxlogo">
+    </a>
+    <a href="/squads">소대 선택</a>
+</div>
+
+<div class="main-content">
+    <h1>Vox</h1>
+    <p>차세대 수신호 기반 소방/경찰 통신 시스템</p>
+</div>
+
+</body>
+</html>
