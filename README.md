@@ -3,6 +3,7 @@
 0. Setup
 
 0-1. 기본 선행 연구는 wear_mocap을 참조하였고, 스마트워치 및 스마트폰의 어플리케이션은 해당 Github 기반 설치가 필요합니다.
+https://github.com/wearable-motion-capture
 
 0-2. 스마트워치와 스마트폰은 블루투스 페어링, 스마트폰과 연산 서버용 컴퓨터는 동일 Wifi내 연결이 되어있어야 합니다.
     Broadcasting 기반 IMU sensor Listen을 하기 때문입니다.
