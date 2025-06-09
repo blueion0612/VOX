@@ -69,6 +69,40 @@ python vox\classification\evaluate_models.py --csv Data\Test\vxo_gesture.csv --m
 
 3. 제출물 폴더 구성 설명
 
+3-0. 간단 요약
+3-0-1. AI 및 Python 스크립트 (담당: 이유현)
+- Data/: 학습 및 테스트에 사용된 데이터 폴더입니다.
+- Offline/: 공개 데이터셋(6DMG)을 CSV로 변환한 데이터가 있습니다.
+- Online/: 스마트워치로 직접 녹화한 학습용 데이터가 있습니다.
+- Test/: 모델 성능 평가에 사용된 별도의 테스트 데이터가 있습니다.
+- Model/: 딥러닝 모델의 학습된 가중치(.pth) 파일이 저장된 폴더입니다. 
+- Online_with_HPF/ 폴더 내 모델이 최종적으로 사용된 버전입니다.
+- vox/: 프로젝트의 핵심 Python 소스 코드입니다.
+- classification/: 모델 구조 정의 및 학습/평가 스크립트가 있습니다.
+- estimate/: 자세 추정을 위한 칼만 필터 코드가 있습니다.
+- stream/: IMU 데이터 수신 및 UDP 전송 코드가 있습니다.
+- watch_phone_pocket_classification.py: 실시간 분류를 위한 메인 실행 스크립트입니다.
+
+3-0-2. Unity 시각화 및 웹 프론트엔드 (담당: 유대용)
+- arm-pose-visualization-main/: Unity 기반 3D 자세 시각화 프로젝트 소스입니다.
+- Assets/: C# 스크립트, 3D 모델, 씬(Scene) 등 주요 리소스를 포함합니다.
+- voxUnity/: 웹에서 시각화를 표시하기 위한 WebGL 빌드 결과물이 저장되어 있습니다.
+- CapstoneVOX-main/webserver/frontend/: 웹 대시보드 프론트엔드 소스입니다.
+- html/, js/, css/: 소대별 상태 대시보드를 구성하는 HTML, JavaScript, CSS 파일이 각각 들어있습니다.
+
+3-3. 백엔드 서버 및 배포 (담당: 백승호)
+- src/: Spring Boot 기반 Java 백엔드 애플리케이션의 전체 소스 코드입니다.
+- main/java/org/vox/capstonedesign1/:
+- controller: 외부 요청을 처리하는 API 컨트롤러를 포함합니다.
+- service: UDP 데이터 처리, 제스처 신호 관리 등 핵심 비즈니스 로직을 구현합니다.
+- repository: 데이터베이스와 상호작용하는 JPA Repository 인터페이스를 정의합니다.
+- domain: 데이터베이스 테이블과 매핑되는 JPA 엔티티를 정의합니다.
+- main/resources/: 정적 웹 리소스 및 서버 설정(application.yml) 파일이 있습니다.
+- test/: 단위 테스트 코드를 포함합니다.
+- .github/: GitHub Actions를 이용한 CI/CD(배포 자동화) 워크플로우 설정이 있습니다.
+- build.gradle: 프로젝트 의존성 및 빌드 방법을 정의하는 Gradle 설정 파일입니다.
+- 실행 파일: 프로젝트 빌드 시 최종 배포용 파일은 build/libs/capstone1-1.0.jar로 생성됩니다.
+
 [이유현]
 3-1. Data 
 3-1-1. Offline 폴더는 공개 데이터세트인 6DMG: ANew6DMotion Gesture Database를 포함하고 있습니다.
