@@ -118,102 +118,103 @@
 <script>
     const squadId = [[${squad.id}]];
     const grid = document.querySelector('.agent-grid');
-    // agent별 label 타이머 관리
-    const labelTimers = {};
-    // 마지막 상태 체크 (미수신 판단용)
-    const lastLabelTimestamps = {};
-    // 미수신 간주 임계시간(초)
-    const LABEL_TIMEOUT_SEC = 5;
 
-    // 상태값이 없거나 null, undefined, 혹은 마지막 수신이 너무 오래 전이면 Stable 처리
-    function getSafeStatus(deviceSerial, status, timestamp) {
-        const now = Date.now();
-        if (!status || status === "" || typeof status === "undefined") return "Stable";
-        // 마지막 라벨 수신 시간 체크
-        if (
-            lastLabelTimestamps[deviceSerial] &&
-            now - lastLabelTimestamps[deviceSerial] > LABEL_TIMEOUT_SEC * 1000
-        ) {
-            return "Stable";
-        }
-        return status;
-    }
+    const lastShownLabel = {};      // 화면에 표시 중인 label (Stable 포함)
+    const lastActiveLabel = {};     // 실제로 마지막으로 들어온 label (Stable 제외)
+    const lastActiveTime = {};      // 마지막으로 실제 label(Stable 제외) 수신한 시각
+    const stableTimers = {};        // Stable 타이머
+
+    const LABEL_TIMEOUT_SEC = 5;
 
     function updateAgentGrid() {
         fetch(`/squads/${squadId}/agent-status`)
             .then(res => res.json())
             .then(data => {
-                const grid = document.querySelector('.agent-grid');
                 grid.innerHTML = '';
+                const now = Date.now();
 
                 data.forEach(agent => {
-                    // 타임스탬프 기억 (마지막 수신 체크용)
-                    lastLabelTimestamps[agent.deviceSerialNumber] = Date.now();
+                    const deviceSerial = agent.deviceSerialNumber;
+                    const currentLabel = agent.estimatedStatus;
 
-                    // 상태값 보정
-                    let status = getSafeStatus(agent.deviceSerialNumber, agent.estimatedStatus, agent.timeStamp);
-                    // 상태에 맞는 CSS 클래스명 만들기
-                    let statusClass = "status-" + (status ? status.replaceAll(" ", "_") : "Stable");
+                    // 처음 label이거나 종류가 바뀐 label(Stable 제외)
+                    if (
+                        currentLabel !== 'Stable' &&
+                        lastActiveLabel[deviceSerial] !== currentLabel
+                    ) {
+                        lastActiveLabel[deviceSerial] = currentLabel;
+                        lastActiveTime[deviceSerial] = now;
+                        lastShownLabel[deviceSerial] = currentLabel;
 
-                    // 카드 생성
-                    const card = document.createElement('div');
-                    card.className = 'agent-card';
-
-                    // 기본 카드 내용
-                    card.innerHTML = `
-                        <h3>${agent.agentName}</h3>
-                        <p class="status-label ${statusClass}" id="label-${agent.deviceSerialNumber}">
-                            ${status}
-                        </p>
-                        <p>${agent.deviceSerialNumber}</p>
-                    `;
-
-                    if (parseInt(squadId) === 1) {
-                        // 1소대: hls
-                        card.style.cursor = 'pointer';
-                        card.addEventListener('click', function() {
-                            window.location.href = `/squads/${squadId}/${agent.deviceSerialNumber}/hls`;
-                        });
-                    } else {
-                        // 2, 3소대: iframe 추가
-                        card.innerHTML += `<iframe src="/unity-view/${agent.deviceSerialNumber}"></iframe>`;
+                        // 타이머 리셋
+                        if (stableTimers[deviceSerial]) clearTimeout(stableTimers[deviceSerial]);
+                        stableTimers[deviceSerial] = setTimeout(() => {
+                            // 5초 내에 다른 label 안오면 Stable로
+                            lastShownLabel[deviceSerial] = "Stable";
+                            renderAgentCards(data);
+                        }, LABEL_TIMEOUT_SEC * 1000);
                     }
-                    grid.appendChild(card);
 
-                    // 상태라벨 5초 출력(새 레이블 오면 타이머 리셋)
-                    showLabelForSeconds(agent.deviceSerialNumber, status, 5);
+                    // 5초 경과 후 아직 Stable이 아니면 Stable로 변경
+                    if (
+                        lastShownLabel[deviceSerial] !== 'Stable' &&
+                        now - (lastActiveTime[deviceSerial] || 0) > LABEL_TIMEOUT_SEC * 1000
+                    ) {
+                        lastShownLabel[deviceSerial] = "Stable";
+                    }
                 });
+
+                renderAgentCards(data);
             });
     }
 
-    function showLabelForSeconds(deviceSerial, label, seconds) {
-        const labelElem = document.getElementById(`label-${deviceSerial}`);
-        if (!labelElem) return;
-        labelElem.innerText = label;
-        labelElem.style.visibility = 'visible';
+    // 실제로 agent 카드 그리는 함수 (코드 가독성 위해 분리)
+    function renderAgentCards(data) {
+        grid.innerHTML = '';
+        data.forEach(agent => {
+            const deviceSerial = agent.deviceSerialNumber;
+            let showLabel = lastShownLabel[deviceSerial] || "Stable";
 
-        // 기존 타이머 제거 (무조건 새로 시작)
-        if (labelTimers[deviceSerial]) {
-            clearTimeout(labelTimers[deviceSerial]);
-        }
-        labelTimers[deviceSerial] = setTimeout(() => {
-            labelElem.style.visibility = 'hidden';
-        }, seconds * 1000);
+            const card = document.createElement('div');
+            card.className = 'agent-card';
+            card.innerHTML = `
+            <h3>${agent.agentName}</h3>
+            <p class="status-label status-${showLabel.replaceAll(' ', '_')}" id="label-${deviceSerial}">
+                ${showLabel}
+            </p>
+            <p>${deviceSerial}</p>
+        `;
+            if (parseInt(squadId) === 1) {
+                card.style.cursor = 'pointer';
+                card.addEventListener('click', function() {
+                    window.location.href = `/squads/${squadId}/${deviceSerial}/hls`;
+                });
+            } else {
+                card.innerHTML += `<iframe src="/unity-view/${deviceSerial}"></iframe>`;
+            }
+            grid.appendChild(card);
+        });
     }
 
-    let logSet = new Set();
+
+    // 로그박스: 최근 로그 위로, 20개 초과 시 스크롤 (최신 로그 맨 위)
     function updateLogBox() {
         fetch(`/squads/${squadId}/logs`)
             .then(res => res.json())
             .then(logs => {
                 let logBox = document.getElementById('log-box');
-                logs.forEach(log => {
+                // 최신 20개만 사용
+                let sliced = logs.slice(0, 20);
+                logBox.innerHTML = "";
+                for (let i = 0; i < sliced.length; i++) {
+                    const log = sliced[i];
                     const logStr = `${log.timeStamp} ${log.agentName}: ${log.estimatedStatus}`;
-                    if (!logSet.has(logStr)) {
-                        logBox.innerHTML += `<div>${logStr}</div>`;
-                        logSet.add(logStr);
-                    }
-                });
+                    // 최신 로그 맨 위에
+                    logBox.innerHTML = `<div>${logStr}</div>` + logBox.innerHTML;
+                }
+                // 항상 스크롤박스 유지 (넘치면 스크롤)
+                logBox.style.overflowY = "auto";
+                logBox.style.maxHeight = "350px";
             });
     }
 
@@ -229,21 +230,19 @@
             });
     }
 
-    if (squadId == 1) {
-        setInterval(() => {
-            updateAgentGrid();
-            updateLogBox();
-            updateAgentInfo();
-        }, 5000);
+    // 1초마다 갱신
+    setInterval(() => {
         updateAgentGrid();
         updateLogBox();
         updateAgentInfo();
-    } else {
-        updateAgentGrid();
-        updateLogBox();
-        updateAgentInfo();
-    }
+    }, 1000);
 
+    // 초기 로딩도 1회 실행
+    updateAgentGrid();
+    updateLogBox();
+    updateAgentInfo();
 </script>
+
+
 </body>
 </html>

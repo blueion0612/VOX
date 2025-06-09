@@ -33,6 +33,7 @@ public class UdpReceiveService {
             try {
                 DatagramPacket packet = new DatagramPacket(buffer, buffer.length);
                 datagramSocket.receive(packet);
+                System.out.println("UDP 수신 bytes=" + packet.getLength());
                 byte[] data = Arrays.copyOfRange(packet.getData(), 0, packet.getLength());
                 agentSignalHandler.handleMessage(data);
             } catch (IOException e) {

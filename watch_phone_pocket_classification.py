@@ -4,6 +4,7 @@ import queue
 import threading
 from datetime import datetime
 import socket
+import struct
 import numpy as np
 import torch
 from pynput import keyboard
@@ -90,15 +91,16 @@ class GestureClassifier(threading.Thread):
                 print("="*30)
 
                 # [수정] UDP 패킷을 직접 생성하고 즉시 전송 및 출력
-                timestamp = datetime.now().timestamp()
-                device_id = 1
-                message_to_send = [timestamp, device_id, predicted_label]
+                timestamp = datetime.now().timestamp()  # 8바이트 double
+                device_id = 1                           # 4바이트 int
+                # predicted_label은 이미 4바이트 int 입니다.
                 
-                # CMD 창에 전송 내역 즉시 출력
-                print(f"[INFO] 제스처 UDP 패킷 발신 -> {self.gesture_ip}:{self.gesture_port} | 데이터: {message_to_send}")
+                # CMD 창에는 사람이 보기 편하도록 원래 데이터 리스트를 출력합니다.
+                human_readable_data = [timestamp, device_id, predicted_label]
+                print(f"[INFO] 제스처 UDP 패킷 발신 -> {self.gesture_ip}:{self.gesture_port} | 내용물: {human_readable_data}")
 
-                # UDP 패킷 발신
-                bytes_to_send = str(message_to_send).encode('utf-8')
+                # '<dii' = Little-Endian, double, int, int (총 16바이트)
+                bytes_to_send = struct.pack('<dii', timestamp, device_id, predicted_label)
                 self.sock.sendto(bytes_to_send, (self.gesture_ip, self.gesture_port))
 
             except queue.Empty:
