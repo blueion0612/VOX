@@ -1,0 +1,64 @@
+name: checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      # Sparse: the repository carries a 368 MB demo video and thousands of .mat
+      # files that none of these checks need.
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            vox
+            docs
+            Model/Offline/Offline_log.txt
+            Model/Online_without_filter/Online_log.txt
+            Model/Online_with_HPF/Online_log.txt
+            Model/Online_with_LPF_HPF/Online_log_lpf.txt
+            README.md
+            watch_phone_pocket_classification.py
+          sparse-checkout-cone-mode: false
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Every source file compiles
+        run: python -m compileall -q vox watch_phone_pocket_classification.py
+
+      - name: The README's result tables still match the training logs
+        run: |
+          pip install --quiet matplotlib numpy
+          python - <<'PY'
+          import io, re
+          rx = re.compile(r"=== Final Test Results for (\w+) ===\s*\n\s*Test Loss\s*:\s*[\d.]+\s*\n\s*Test Accuracy\s*:\s*([\d.]+)")
+          logs = {
+              "no filter": "Model/Online_without_filter/Online_log.txt",
+              "high-pass": "Model/Online_with_HPF/Online_log.txt",
+              "low+high": "Model/Online_with_LPF_HPF/Online_log_lpf.txt",
+          }
+          readme = io.open("README.md", encoding="utf-8").read()
+          bad = []
+          for cond, path in logs.items():
+              s = io.open(path, encoding="utf-8", errors="replace").read()
+              for m in rx.finditer(s):
+                  pct = f"{float(m.group(2)) * 100:.2f}"
+                  if pct not in readme:
+                      bad.append(f"{cond}/{m.group(1)} = {pct} is not in the README")
+          off = io.open("Model/Offline/Offline_log.txt", encoding="utf-8", errors="replace").read()
+          for a, sd in re.findall(r"Mean\s*:\s*Loss=[\d.]+±[\d.]+,\s*Acc=([\d.]+)±([\d.]+)", off):
+              if f"{float(a)*100:.2f}" not in readme:
+                  bad.append(f"offline mean {float(a)*100:.2f} is not in the README")
+          if bad:
+              raise SystemExit("README drifted from the logs:\n  " + "\n  ".join(bad))
+          print("every number in the README is present in the logs")
+          PY
+
+      - name: The hero figure regenerates from those logs
+        run: python docs/figures/make_hero.py
