@@ -8,7 +8,7 @@ Yuhyeon Lee · 2025
 [![Unity](https://img.shields.io/badge/visualisation-Unity-lightgrey)](https://unity.com/)
 [![Status](https://img.shields.io/badge/status-coursework-orange)](#limitations)
 
-[**Report**](캡스톤디자인_보고서_이유현.pdf) · [**Slides**](캡스톤디자인_PPT_이유현.pptx) · [**Streaming app**](https://github.com/wearable-motion-capture/sensor-stream-apps)
+[**Report**](capstone_report.pdf) · [**Slides**](capstone_slides.pptx) · [**Streaming app**](https://github.com/wearable-motion-capture/sensor-stream-apps)
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/figures/hero_models-dark.png">
