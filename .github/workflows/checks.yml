@@ -7,6 +7,25 @@ on:
   workflow_dispatch:
 
 jobs:
+  compile:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.9", "3.10", "3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            vox
+            watch_phone_pocket_classification.py
+          sparse-checkout-cone-mode: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Every source file compiles
+        run: python -m compileall -q vox watch_phone_pocket_classification.py
+
   check:
     runs-on: ubuntu-latest
     steps:
@@ -28,9 +47,6 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-
-      - name: Every source file compiles
-        run: python -m compileall -q vox watch_phone_pocket_classification.py
 
       - name: The README's result tables still match the training logs
         run: |

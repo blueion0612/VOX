@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vox-capstone"
+version = "1.0.0"
+description = "Hand signals from a smartwatch, classified and relayed to a command post"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Yuhyeon Lee" }]
+requires-python = ">=3.9"
+dependencies = [
+  "torch>=1.10",
+  "numpy>=1.21",
+  "scipy>=1.7",
+  "pandas>=1.3",
+]
+
+[project.urls]
+Repository = "https://github.com/blueion0612/CapstoneVOX"
+Portfolio = "https://blueion0612.github.io"
+
+[tool.setuptools.packages.find]
+include = ["vox*"]

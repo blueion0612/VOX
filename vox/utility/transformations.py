@@ -395,7 +395,7 @@ def quaternion_to_exponential_map(q: np.array):
     # transpose to allow multiplications and divisions
     axis = np.transpose(q_img)
     axis = np.divide(axis, np.sin(.5 * theta))
-    axis = np.divide(axis, np.linalg.norm(axis, axis=0))  # normalise axis
+    axis = np.divide(axis, np.linalg.norm(axis, axis=0))  # normalize axis
     axis = np.multiply(axis, theta)
     axis = np.transpose(axis)
 

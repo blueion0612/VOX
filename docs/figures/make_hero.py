@@ -12,10 +12,13 @@ import os
 import re
 from pathlib import Path
 
-import matplotlib
-matplotlib.use("Agg")
-import matplotlib.pyplot as plt
-import numpy as np
+import sys
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+import figstyle  # noqa: E402
+import matplotlib.pyplot as plt  # noqa: E402
+import numpy as np  # noqa: E402
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent.parent
@@ -28,13 +31,6 @@ ONLINE = {
 OFFLINE = ROOT / "Model" / "Offline" / "Offline_log.txt"
 MODELS = ["bilstm", "gru", "simplecnn", "cnnbilstm", "smalltcn"]
 LABELS = ["BiLSTM", "GRU", "CNN", "CNN-BiLSTM", "TCN"]
-
-THEMES = {
-    "light": dict(bg="white", ink="#1c2530", muted="#5b6875", grid="#e2e7ec",
-                  bars=["#9fb0c0", "#4a7fb5", "#c8683f"], off="#3f7d5a"),
-    "dark": dict(bg="#0d1117", ink="#e6edf3", muted="#9198a1", grid="#262c34",
-                 bars=["#5b6875", "#6ea8dd", "#e08a5c"], off="#5aa87a"),
-}
 
 FINAL = re.compile(
     r"=== Final Test Results for (\w+) ===\s*\n\s*Test Loss\s*:\s*[\d.]+\s*\n"
@@ -56,54 +52,49 @@ def read_offline():
     return {n: (float(a) * 100, float(sd) * 100) for n, (a, sd) in zip(names, means)}
 
 
-def render(theme, out_path, online, offline):
-    T = THEMES[theme]
-    fig, axes = plt.subplots(1, 2, figsize=(9.6, 3.5), dpi=170,
-                             gridspec_kw={"width_ratios": [1.0, 1.35]})
-    fig.patch.set_facecolor(T["bg"])
-
-    ax = axes[0]
-    vals = [offline[m][0] for m in MODELS]
-    errs = [offline[m][1] for m in MODELS]
-    ax.bar(LABELS, vals, yerr=errs, capsize=3, color=T["off"], width=0.6,
-           error_kw=dict(ecolor=T["muted"], lw=1.1))
-    ax.set_title("Public dataset, 5-fold cross-validation", fontsize=10.6,
-                 color=T["ink"], fontweight="bold", pad=10)
-    ax.set_ylim(85, 101)
-
-    ax = axes[1]
-    x = np.arange(len(MODELS))
-    w = 0.26
-    for i, (cond, colour) in enumerate(zip(ONLINE, T["bars"])):
-        ax.bar(x + (i - 1) * w, [online[cond][m] for m in MODELS], w,
-               label=cond, color=colour)
-    ax.set_xticks(x)
-    ax.set_xticklabels(LABELS)
-    ax.set_title("Own recordings, 60 held-out samples", fontsize=10.6,
-                 color=T["ink"], fontweight="bold", pad=10)
-    ax.set_ylim(85, 101)
-    leg = ax.legend(fontsize=8.6, frameon=False, loc="lower right", ncol=3,
-                    columnspacing=1.1, handlelength=1.2)
-    for t in leg.get_texts():
-        t.set_color(T["muted"])
-
-    for ax in axes:
-        ax.set_ylabel("accuracy %", fontsize=9, color=T["muted"])
-        ax.set_facecolor(T["bg"])
-        ax.tick_params(colors=T["muted"], labelsize=9)
-        ax.grid(axis="y", color=T["grid"], lw=0.9)
+def make(online, offline):
+    def draw(T):
+        fig, axes = plt.subplots(1, 2, figsize=(figstyle.WIDTH, 3.5),
+                                 gridspec_kw={"width_ratios": [1.0, 1.35]})
+        ax = axes[0]
+        vals = [offline[m][0] for m in MODELS]
+        errs = [offline[m][1] for m in MODELS]
+        ax.yaxis.grid(True, color=T["line"], linewidth=0.8, zorder=0)
         ax.set_axisbelow(True)
-        for side in ("top", "right", "left"):
-            ax.spines[side].set_visible(False)
-        ax.spines["bottom"].set_color(T["grid"])
+        ax.bar(LABELS, vals, yerr=errs, capsize=3, color=T["green"], width=0.6,
+               error_kw=dict(ecolor=T["muted"], lw=1.1), zorder=3)
+        ax.set_title("Public dataset, 5-fold cross-validation", pad=10)
+        ax.set_ylim(85, 101)
 
-    fig.tight_layout(pad=0.5)
-    fig.savefig(out_path, dpi=170, bbox_inches="tight", facecolor=T["bg"])
-    plt.close(fig)
-    print("wrote", out_path)
+        ax = axes[1]
+        x = np.arange(len(MODELS))
+        w = 0.26
+        ax.yaxis.grid(True, color=T["line"], linewidth=0.8, zorder=0)
+        ax.set_axisbelow(True)
+        for i, (cond, color) in enumerate(zip(ONLINE, [T["muted"], T["green"], T["gold"]])):
+            ax.bar(x + (i - 1) * w, [online[cond][m] for m in MODELS], w, label=cond,
+                   color=color, zorder=3)
+        ax.set_xticks(x)
+        ax.set_xticklabels(LABELS)
+        ax.set_title("Own recordings, 60 held-out samples", pad=10)
+        ax.set_ylim(85, 101)
+        # below the axis, where the bars cannot run into it
+        leg = ax.legend(loc="upper center", bbox_to_anchor=(0.5, -0.16), ncol=3,
+                        columnspacing=1.1, handlelength=1.2, fontsize=figstyle.SMALL)
+        for t in leg.get_texts():
+            t.set_color(T["muted"])
+
+        for ax in axes:
+            ax.set_ylabel("accuracy, %")
+            ax.tick_params(axis="x", length=0, pad=5)
+            ax.spines["left"].set_visible(False)
+            ax.tick_params(axis="y", length=0)
+            figstyle.mono_ticks(ax)
+        fig.tight_layout(pad=0.5)
+        return fig
+    return draw
 
 
 if __name__ == "__main__":
     on, off = read_online(), read_offline()
-    render("light", HERE / "hero_models.png", on, off)
-    render("dark", HERE / "hero_models-dark.png", on, off)
+    figstyle.save_both(make(on, off), str(HERE / "hero_models"))
