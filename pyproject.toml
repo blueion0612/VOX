@@ -3,7 +3,7 @@ requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "vox-capstone"
+name = "vox"
 version = "1.0.0"
 description = "Hand signals from a smartwatch, classified and relayed to a command post"
 readme = "README.md"
@@ -19,7 +19,7 @@ dependencies = [
 ]
 
 [project.urls]
-Repository = "https://github.com/blueion0612/CapstoneVOX"
+Repository = "https://github.com/blueion0612/VOX"
 Portfolio = "https://blueion0612.github.io"
 
 [tool.setuptools.packages.find]

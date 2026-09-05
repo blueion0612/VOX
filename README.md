@@ -4,8 +4,8 @@
 
 Yuhyeon Lee · 2025
 
-[![checks](https://img.shields.io/github/actions/workflow/status/blueion0612/CapstoneVOX/checks.yml?branch=main&label=checks)](https://github.com/blueion0612/CapstoneVOX/actions/workflows/checks.yml)
-[![License](https://img.shields.io/github/license/blueion0612/CapstoneVOX)](LICENSE)
+[![checks](https://img.shields.io/github/actions/workflow/status/blueion0612/VOX/checks.yml?branch=main&label=checks)](https://github.com/blueion0612/VOX/actions/workflows/checks.yml)
+[![License](https://img.shields.io/github/license/blueion0612/VOX)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.9%20%7C%203.10%20%7C%203.11%20%7C%203.12-blue)](https://www.python.org/)
 [![Status](https://img.shields.io/badge/status-coursework-orange)](#limitations)
 [![Platform](https://img.shields.io/badge/platform-Windows-lightgrey)](#requirements)
