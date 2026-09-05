@@ -172,7 +172,7 @@ A WearOS watch and an Android phone running the sensor stream apps.
 
 ## Related
 
-- [IMU_Stream_APP_MJU](https://github.com/blueion0612/IMU_Stream_APP_MJU): the
+- [IMU_Streamer](https://github.com/blueion0612/IMU_Streamer): the
   author's fork of the same streaming apps, sending a reduced 30-float packet. VOX
   uses the upstream apps unchanged.
 - [IVO](https://github.com/blueion0612/IVO): the sibling capstone, smartwatch
