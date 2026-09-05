@@ -33,6 +33,13 @@ is recorded on a key press, classified, and the result goes out over UDP to a se
 Undergraduate capstone project, Myongji University, 2025. Team of three; the machine
 learning, the Python pipeline and this repository are the author's part.
 
+| ![The arm pose drawn in Unity and streamed to the squad page, which shows the agent as stable](docs/img/demo_stable.png) | ![The X signal recognized in the classifier's log, and the squad page showing SOS](docs/img/demo_sos.png) | ![The circle signal recognized, and the squad page showing a request for assistance](docs/img/demo_assist.png) |
+|---|---|---|
+| Stable: the arm pose, drawn in Unity and streamed to the squad page | X, read as SOS | Circle, read as a request for assistance |
+
+*Three frames from the demo recording, on the deployed server in 2025: the Unity
+stream on the left, the classifier's log below it, and the squad page on the right.*
+
 ## Results
 
 Three signals are recognized: **V**, **X** and **circle**. Five architectures were
@@ -149,6 +156,7 @@ Model/
 visualization/           Unity arm pose visualizer
 webserver/               the receiving end of the UDP messages
 docs/figures/            README figure, the script that draws it, figstyle.py
+docs/img/                three frames from the demo recording
 watch_phone_pocket_classification.py    live classification entry point
 pyproject.toml           the vox package and its dependencies
 ```
